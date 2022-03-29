@@ -1,3 +1,11 @@
+# Updated README.md
+
+Overview of dev environment setup (e.g. updates to _env.rb)
+- Instructions for populating database (e.g. a rake task or seed setup)
+- Description of prototype functionality
+- Recommended walkthrough steps to observe key features
+
+
 # ValetBike
 
 Smith College CSC223: Software Engineering\
