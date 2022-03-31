@@ -12,6 +12,18 @@
     <title>ValetBike</title>
   </head>
   <body>
+  <nav>
+  <div>  
+    <p> <a href="app/views/pages/index.html">Home</a> <a href="app/views/pages/index.html">Pricing</a> <a href="app/views/pages/index.html">Map</a> <a href="app/views/pages/index.html">FAQ</a> <a href="app/views/pages/index.html">Pricing</a></p>
+  </div>
+  <div>
+    # <% if THEY ARE LOGGED IN %>
+    #   <a href=app/views/pages/account.html>Account</a>
+    #   SIGN OUT BUTTON
+    # <% else $>
+    <p><a href="app/views/pages/signup.html">Sign Up</a> <a href="app/views/pages/login.html">Log In</a></p>
+  </div>
+</nav>
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <div class="flexbox vertical center">
         <%= yield %>
