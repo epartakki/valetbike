@@ -13,14 +13,14 @@
   </head>
   <body>
   <nav>
-  <div>  
+  <div>
     <p> <a href="app/views/pages/index.html">Home</a> <a href="app/views/pages/index.html">Pricing</a> <a href="app/views/pages/index.html">Map</a> <a href="app/views/pages/index.html">FAQ</a> <a href="app/views/pages/index.html">Pricing</a></p>
   </div>
   <div>
-    # <% if THEY ARE LOGGED IN %>
-    #   <a href=app/views/pages/account.html>Account</a>
-    #   SIGN OUT BUTTON
-    # <% else $>
+    <% if THEY ARE LOGGED IN %>
+      <a href=app/views/pages/account.html>Account</a>
+      <p>SIGN OUT BUTTON</p>
+    <% else %>
     <p><a href="app/views/pages/signup.html">Sign Up</a> <a href="app/views/pages/login.html">Log In</a></p>
   </div>
 </nav>
@@ -29,5 +29,7 @@
         <%= yield %>
       </div>
     </div>
+    <footer>
+    </footer>
   </body>
 </html>
