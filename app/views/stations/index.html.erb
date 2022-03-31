@@ -1,16 +1,39 @@
-<div class="page-section flexbox vertical stretch">
-  <div class="section-inner flexbox vertical stretch">
-    <div class="section-title">
-      Welcome to ValetBike!
-    </div>  
-    <div class="flexbox vertical stretch">
-      <% if @stations.present? %>
-        <%= render(partial: "stations/row", collection: @stations, as: :station) %>
-      <% else %>
-      <div class="empty">
-        No stations found.
-      </div>
-      <% end %>
-    </div>
-	</div>
-</div>
+<nav>
+  <div>  
+    <a href="app/views/pages/index.html">Home</a>
+    <a href="app/views/pages/index.html">Pricing</a>
+    <a href="app/views/pages/index.html">Map</a>
+    <a href="app/views/pages/index.html">FAQ</a>
+    <a href="app/views/pages/index.html">Pricing</a>
+  </div>
+  <div>
+    # <% if THEY ARE LOGGED IN %>
+    #   <a href=app/views/pages/account.html>Account</a>
+    #   SIGN OUT BUTTON
+    # <% else $>
+    <a href="app/views/pages/signup.html">Sign Up</a>
+    <a href="app/views/pages/login.html">Log In</a>
+  </div>
+</nav>
+<main>
+# <div class="page-section flexbox vertical stretch">
+#   <div class="section-inner flexbox vertical stretch">
+#     <div class="section-title">
+#       Welcome to ValetBike!
+#     </div>  
+#     <div class="flexbox vertical stretch">
+#       <% if @stations.present? %>
+#         <%= render(partial: "stations/row", collection: @stations, as: :station) %>
+#       <% else %>
+#       <div class="empty">
+#         No stations found.
+#       </div>
+#       <% end %>
+#     </div>
+# 	</div>
+# </div>
+<a href="app/views/pages/map.html">Find a Bike</a>
+
+</main>
+<footer>
+</footer>
