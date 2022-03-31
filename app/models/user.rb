@@ -3,7 +3,9 @@ class User < ApplicationRecord
                             :name,
                             :email,
                             :phoneNumber,
-                            :milesRidden,
-                            :timesRidden
+                            :milesRidden,   #depends on rides
+                            :timesRidden    #depends on rides
     validates_uniqueness_of :identifier
+
+    belongs_to :rides, class_name: :Ride, foreign_key: :ride_id
 end
