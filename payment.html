@@ -1,56 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices -->
-    <title>Make Payment</title>
-  </head>
-
-  <body>
-    <!-- Include the PayPal JavaScript SDK; replace "test" with your own sandbox Business account app client ID -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AR5RGg6eq2jEloMZYTYdXSZUFLqEze-0EpDN54UE3j7uY2PIjXcXgpyh3gHJaOXJwLKdYinCRlC8IUsd&currency=USD"></script>
-
-    <!-- Set up a container element for the button -->
+<div id="smart-button-container">
+  <div style="text-align: center;">
     <div id="paypal-button-container"></div>
+  </div>
+</div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+function initPayPalButton() {
+  paypal.Buttons({
+    style: {
+      shape: 'rect',
+      color: 'gold',
+      layout: 'vertical',
+      label: 'paypal',
+    },
 
-    <script>
-      paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+      });
+    },
 
-        // Sets up the transaction when a payment button is clicked
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: '77.44' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
-              }
-            }]
-          });
-        },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(orderData) {
+        
+        // Full available details
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
-        // Finalize the transaction after payer approval
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(orderData) {
-            // Successful capture! For dev/demo purposes:
-                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                var transaction = orderData.purchase_units[0].payments.captures[0];
-                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+        // Show a success message within this page, e.g.
+        const element = document.getElementById('paypal-button-container');
+        element.innerHTML = '';
+        element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // var element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '';
-            element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
-          });
-        },
+        // Or go to another URL:  actions.redirect('thank_you.html');
+        
+      });
+    },
 
-        style: {
-          layout: 'vertical',
-          color:  'blue',
-          shape:  'rect',
-          label:  'paypal',
-          tagline: 'false'
-        }
-      }).render('#paypal-button-container');
-
-    </script>
-  </body>
-</html>
+    onError: function(err) {
+      console.log(err);
+    }
+  }).render('#paypal-button-container');
+}
+initPayPalButton();
+</script>
