@@ -1,7 +1,14 @@
 class Station < ApplicationRecord
     validates_presence_of   :identifier,
                             :name,
-                            :address
+                            :address_line1,
+                            :address_city,
+                            :address_state,
+                            :address_country,
+                            :total_slots,
+                            :available_slots, # changes
+                            :lng,
+                            :lat
     validates_uniqueness_of :identifier
   
     has_many :docked_bikes, class_name: :Bike, foreign_key: :current_station_id
