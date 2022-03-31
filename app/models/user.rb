@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     validates_presence_of   :identifier,
-                            :name,
+                            :firstName,
+                            :lastName,
                             :email,
                             :phoneNumber,
                             :milesRidden,   #depends on rides
