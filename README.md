@@ -3,6 +3,10 @@
 Overview of dev environment setup (e.g. updates to _env.rb)
 - Instructions for populating database (e.g. a rake task or seed setup)
 - Description of prototype functionality
+* Bare bones layout
+* Basic Front-End
+* Establish a database
+* Utilize the Google Maps and PayPal APIs
 - Recommended walkthrough steps to observe key features
 
 
