@@ -1,6 +1,9 @@
 # KALES meets ValetBike
 
-## Overview of dev environment setup (e.g. updates to _env.rb)
+### Overview of dev environment setup (e.g. updates to _env.rb)
+
+ADD info
+
 ### Instructions for populating database (e.g. a rake task or seed setup)
 1. `bundle install`
 2. `rake db:migrate`
