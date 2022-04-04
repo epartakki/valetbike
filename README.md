@@ -40,8 +40,8 @@
     > - `payment.html`
 
 ### Current error locations:
-> - `app/models/user.rb`
-> - `app/controllers/application_controller.rb`
+- `app/models/user.rb`
+- `app/controllers/application_controller.rb`
 
 
 ***
