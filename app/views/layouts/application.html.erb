@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    #code that will render the application title in a more dynamic way
-    <title><%= content_for?(:title) ? yield(:title) : "ValetBike?" %></title>
-    
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "About ValetBike" %>">
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
-    #tells Rails to load our main webpack entry point at app/javascript/packs/application.js
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <title>ValetBike</title>
   </head>
 
+
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <%= content_for?(:content) ? yield(:content) : yield %>
-    </main>  
+    <div id="site-container" class="flexbox vertical stretch flex-1">
+      <div class="flexbox vertical center">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
