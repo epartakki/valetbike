@@ -16,12 +16,12 @@
     - Created image folder
     - Set-up controllers
     - Set-up helpers
-    - Edited models
+    - Added and edited models
     - Added layouts
     - Added to routes.rb
     - Set up robots.txt
 - Database
-    - Added 3 new migrations
+    - Added 5 new migrations
     - Set up schema.rb
     - Set up seeds.rb
     - Set up an import_data rake
