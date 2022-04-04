@@ -1,20 +1,26 @@
 # KALES meets ValetBike
 
 ## Overview of dev environment setup (e.g. updates to _env.rb)
-**Instructions for populating database (e.g. a rake task or seed setup)**
+###Instructions for populating database (e.g. a rake task or seed setup)
 1. `bundle install`
 2. `rake db:migrate`
 3. `rake import_data:import_station_data`
 4. `rackup`
 
-**Description of prototype functionality**
+###Description of prototype functionality
 - Bare bones layout (Front-End and Back-End) 
     - 
-    - 
+    - Current errors:
+> app/models/user.rb:2:in `<class:User>'
+> app/models/user.rb:1:in `<main>'
+> app/controllers/application_controller.rb:8:in `current_user'
+> app/controllers/application_controller.rb:12:in `logged_in?'
+> app/controllers/application_controller.rb:16:in `authorized'
+    
 - Database
 - Utilize Google Maps and PayPal
 
-**Recommended walkthrough steps to observe key features**
+###Recommended walkthrough steps to observe key features
 
 
 
