@@ -9,18 +9,28 @@
 
 ### Description of prototype functionality
 - Bare bones layout (Front-End and Back-End) 
-    -     
+    - Installed Bootstrap
+    - Created image folder
+    - Set-up controllers
+    - Set-up helpers
+    - Edited models
+    - Added layouts
+    - Added to routes.rb
+    - Set up robots.txt
 - Database
+    - Added 3 new migrations
+    - Set up schema.rb
+    - Set up seeds.rb
+    - Set up an import_data rake
 - Utilize Google Maps and PayPal
+    - Opted to using Paypal buttons for our MVP which do not need additional credentials but instead a transfer of code (minimal to non-existent functionality)
+    - Google Maps credentials established on Google Cloud, but need to integrate code out of the maps file, and into the html
 
 ###Recommended walkthrough steps to observe key features
 
-### Current errors:
-> app/models/user.rb:2:in `<class:User>'
-> app/models/user.rb:1:in `<main>'
-> app/controllers/application_controller.rb:8:in `current_user'
-> app/controllers/application_controller.rb:12:in `logged_in?'
-> app/controllers/application_controller.rb:16:in `authorized'
+### Current error locations:
+> app/models/user.rb
+> app/controllers/application_controller.rb
 
 
 ***
