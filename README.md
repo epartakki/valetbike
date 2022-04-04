@@ -45,3 +45,11 @@ ADD info
 ### Current error locations:
 - `app/models/user.rb`
 - `app/controllers/application_controller.rb`
+
+### Citations
+- https://github.com/AnyKeyOrg/anykey
+- https://guides.rubyonrails.org/
+- https://www.digitalocean.com/community/tutorials/how-to-add-bootstrap-to-a-ruby-on-rails-application
+- https://www.digitalocean.com/community/tutorial_series/rails-on-containers
+- https://getbootstrap.com/docs/3.4/components/
+- https://getbootstrap.com/docs/3.3/getting-started/
