@@ -33,17 +33,17 @@
 - Currently, we recommend going through the files to observe what we have attempted to set-up as we do not have functionality without errors. Our task is to solve this isssue this week, so we can continue implementing our features.
 
 ### Current error locations:
-> app/models/user.rb
-> app/controllers/application_controller.rb
+> - app/models/user.rb
+> - app/controllers/application_controller.rb
 
 
 ***
 ### Old README.md
 ***
 
-# ValetBike
+# Older README.md ValetBike
 
-Smith College CSC223: Software Engineering\
+Smith College CSC223: Software Engineering
 Starter App for ValetBike project
 
 ## Environment Configuration
@@ -114,7 +114,3 @@ MYSQL_SOCKET=/var/run/mysqld/mysqld.sock  # For Windows
 * If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
 * If using `rails s` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
 * You should see ValetBike welcome page
-  
-
-
-
