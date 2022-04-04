@@ -2,6 +2,10 @@
 
 ## Overview of dev environment setup (e.g. updates to _env.rb)
 **Instructions for populating database (e.g. a rake task or seed setup)**
+bundle install
+rake db:migrate
+rake import_data:import_station_data
+rackup
 
 **Description of prototype functionality**
  * Bare bones layout
