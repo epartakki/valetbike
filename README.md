@@ -1,20 +1,25 @@
-# Updated README.md
+# KALES meets ValetBike
 
 ## Overview of dev environment setup (e.g. updates to _env.rb)
 **Instructions for populating database (e.g. a rake task or seed setup)**
-* `bundle install`
-* `rake db:migrate`
-* `rake import_data:import_station_data`
-* `rackup`
+1. `bundle install`
+2. `rake db:migrate`
+3. `rake import_data:import_station_data`
+4. `rackup`
 
 **Description of prototype functionality**
- * Bare bones layout
- * Basic Front-End
- * Establish a database
- * Utilize the Google Maps and PayPal APIs
+- Bare bones layout (Front-End and Back-End) 
+    - 
+    - 
+- Database
+- Utilize Google Maps and PayPal
 
 **Recommended walkthrough steps to observe key features**
 
+
+
+***
+***
 
 # ValetBike
 
