@@ -30,7 +30,16 @@
     - Google Maps credentials established on Google Cloud, but need to integrate code out of the maps file, and into the html
 
 ### Recommended walkthrough steps to observe key features
-- Currently, we recommend going through the files to observe what we have attempted to set-up as we do not have functionality without errors. Our task is to solve this isssue this week, so we can continue implementing our features.
+- Currently, we recommend going through the following files to observe what we have attempted to set-up as we do not have functionality without errors. Our task is to solve this isssue this week, so we can continue implementing our features.
+
+    - `app/controllers`
+    - `app/map`
+    - `app/models`
+    - `app/views/layouts`
+
+    - `db/`
+
+    - `payment.html`
 
 ### Current error locations:
 > - app/models/user.rb
