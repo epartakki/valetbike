@@ -35,7 +35,7 @@
     > - `app/controllers`
     > - `app/map`
     > - `app/models`
-    > - `app/views/layouts`
+    > - `app/views`
     > - `db/`
     > - `payment.html`
 
