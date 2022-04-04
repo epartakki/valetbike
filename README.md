@@ -53,3 +53,5 @@ ADD info
 - https://www.digitalocean.com/community/tutorial_series/rails-on-containers
 - https://getbootstrap.com/docs/3.4/components/
 - https://getbootstrap.com/docs/3.3/getting-started/
+- https://stackoverflow.com/questions/42175701/rails-5-google-places-gem-error
+- https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
