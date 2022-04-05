@@ -37,3 +37,7 @@ end
 #     }
 #     )
 # end
+
+places = Place.create([{ name: "Northampton" }, { name: "Florence"}])
+Primary.create(name:"Smith College", place: places.first)
+
