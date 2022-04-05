@@ -13,9 +13,6 @@
 ActiveRecord::Schema.define(version: 2022_03_30_211042) do
 
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.string "bike_model"
-    t.integer "charge"
-    t.string "condition"
     t.integer "current_station_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,19 +32,18 @@ ActiveRecord::Schema.define(version: 2022_03_30_211042) do
 
   create_table "stations", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "name"
-    t.string "address_line1"
-    t.string "address_city"
-    t.string "address_state"
-    t.string "address_country"
+    t.boolean "has_kiosk"
+    t.boolean "needs_maintenance"
     t.integer "total_slots"
     t.integer "available_slots"
-    t.integer "lng"
-    t.integer "lat"
+    t.integer "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
     t.string "first_name"
     t.string "last_name"
     t.string "email"
