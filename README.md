@@ -7,9 +7,11 @@ Starter App for ValetBike project
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
+There are no significant changes to the dev environment.
+
 - Rails
-- Bootstrap (downloaded but not integrated in our app)
-- Yarn
+- Bootstrap (downloaded but not integrated, hope to use in MVP)
+- Yarn (downloaded but not integrated, hope to use in tandem with Bootstrap in MVP)
 
 ## General Configuration Steps
 
