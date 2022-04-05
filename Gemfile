@@ -67,6 +67,9 @@ gem 'mysql2'
 gem 'jquery-rails'
 gem 'dotenv-rails'
 
+# Additional gems for mapping in case we cannot get Google Maps to work
+gem 'leaflet-rails'
+
 # Suggested Potentially Useful Gems
 # gem 'devise'
 # gem 'httparty'
