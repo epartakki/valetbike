@@ -52,11 +52,6 @@ There are no significant changes to the dev environment.
     > - `app/models`
     > - `app/views`
     > - `db/`
-    > - `payment.html`
-
-### Current error locations:
-- `app/models/user.rb`
-- `app/controllers/application_controller.rb`
 
 ### Citations
 - https://github.com/AnyKeyOrg/anykey
