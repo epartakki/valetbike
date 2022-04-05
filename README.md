@@ -8,7 +8,7 @@ Starter App for ValetBike project
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
 *Added new gems:*
-- `gem 'leaflet-rails'` (not used)
+- `gem leaflet-rails` (not used)
 - `gem bcrypt` (not used)
 
 *Frameworks*
