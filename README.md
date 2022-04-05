@@ -1,11 +1,17 @@
 # KALES meets ValetBike
 
-![Screencap of what we have](screencap.png)
+Smith College CSC223: Software Engineering
+Starter App for ValetBike project
 
+![Screencap of what we have](screencap.png)
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
 ADD info
+
+***
+
+## General Configuration Steps
 
 ### Instructions for populating database (e.g. a rake task or seed setup)
 1. `bundle install`
@@ -14,6 +20,8 @@ ADD info
 
 * If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
 * If using `rails s` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
+
+* You should see ValetBike welcome page
 
 ### Description of prototype functionality
 - Bare bones layout (Front-End and Back-End) 
