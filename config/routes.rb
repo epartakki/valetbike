@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   post 'logout', to: 'sessions#logout'
 
   resources :places
-  root to: "sessions#welcome"
+  root to: "home#index"
 end
