@@ -1,13 +1,13 @@
 :root {
-  --title-font:             'Rubik', 'Arial';
-  --body-font:              'Rubik', 'Arial';
+  --title-font:             'Rubik', 'Rubik Microbe';
+  --body-font:              'Rubik', 'Rubik Microbe';
 
-  --black-color:            #160919;
+  --black-color:            #d7dc74;
   --light-black-color:      #2E2230;
-  --gray-color:             #84848C;
+  --gray-color:             #d7dc74;
   --light-gray-color:       #D0CED1;
-  --dark-white-color:       #F3F2F3;
-  --medium-white-color:     #FDFCFD;
-  --white-color:            #FFFFFF;
+  --dark-white-color:       #ed7331;
+  --medium-white-color:     #a9b7d5;
+  --white-color:            #526f71;
 
 }
