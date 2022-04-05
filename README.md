@@ -1,5 +1,8 @@
 # KALES meets ValetBike
 
+![Screencap of what we have](screencap.png)
+
+
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
 ADD info
@@ -55,3 +58,4 @@ ADD info
 - https://getbootstrap.com/docs/3.3/getting-started/
 - https://stackoverflow.com/questions/42175701/rails-5-google-places-gem-error
 - https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
+- https://rubygems.org/gems/leaflet-rails/versions/1.7.0
