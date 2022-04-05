@@ -7,9 +7,9 @@ Starter App for ValetBike project
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
-ADD info
-
-***
+- Rails
+- Bootstrap (downloaded but not integrated in our app)
+- Yarn
 
 ## General Configuration Steps
 
