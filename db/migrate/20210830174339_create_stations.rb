@@ -2,14 +2,11 @@ class CreateStations < ActiveRecord::Migration[6.1]
   def change
     create_table :stations do |t|
       t.string  :name
-      t.string  :address_line1
-      t.string  :address_city
-      t.string  :address_state
-      t.string  :address_country
+      t.boolean :has_kiosk
+      t.boolean :needs_maintenance
       t.integer :total_slots
       t.integer :available_slots
-      t.integer :lng
-      t.integer :lat
+      t.integer :address
 
       t.timestamps
     end
