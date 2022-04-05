@@ -1,0 +1,45 @@
+<h1>Map</h1>
+
+<div id="map" style="width: 900px; height: 500px"></div>
+
+<script>
+var marker = L.icon({
+    	iconUrl: 'marker.png',
+    	iconSize: [50, 50],
+    	iconAnchor: [37.5, 75]
+    });
+
+// Set lat and lng
+var latLon = L.latLng(42.32529052324533, -72.65033251578427);
+var bounds = latLon.toBounds(3000); // 3000 = metres
+
+// Map creation
+  var map = L.map('map', {
+    center: L.latLng(42.32529052324533, -72.65033251578427),
+    zoom: 13
+});
+
+// Coordinate focus
+map.panTo(latLon).fitBounds(bounds);
+
+// Creates the open street map tile layer and adds marker icon to it
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+
+  L.marker([42.319761695581136, -72.6378410255895], {icon: marker}).addTo(map)
+    .bindPopup('John M. Greene Hall/Smith College Station') //Adds pop up description
+    .openPopup();
+
+  L.marker([42.316778678292394, -72.63583167529939], {icon: marker}).addTo(map)
+    .bindPopup('Forbes Library Station') //Adds pop up description
+    .openPopup();
+
+  L.marker([42.3174215778964, -72.6330052660747], {icon: marker}).addTo(map)
+    .bindPopup('Pulaski Park/Downtown Station') //Adds pop up description
+    .openPopup();
+
+  L.marker([42.31974503347566, -72.6303143525796], {icon: marker}).addTo(map)
+    .bindPopup('Main Street/Court House Station') //Adds pop up description
+    .openPopup();
+
+</script>
