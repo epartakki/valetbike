@@ -11,7 +11,8 @@ class User < ApplicationRecord
                             :miles_ridden,   #depends on rides
                             :ride_count    #depends on rides
     
-    validates_uniqueness_of :identifier
+    validates_uniqueness_of :identifier,
+                            :username
 
     belongs_to :rides, class_name: :Ride, foreign_key: :user_id
 end
