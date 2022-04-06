@@ -25,19 +25,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">About</a>
+            <%= link_to "About", "/about", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Map</a>
+          <%= link_to "Map", "/map", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Pricing</a>
+            <%= link_to "Pricing", "/pricing", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">FAQ</a>
+            <%= link_to "FAQ", "/faq", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Login/Signup</a>
+            <%= link_to "Signup", "/signup", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Login", "/login", class: "nav-link" %>
           </li>
           </ul>
         </div>
