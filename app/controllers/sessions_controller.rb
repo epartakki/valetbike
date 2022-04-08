@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def login
+    render "views/sessions/login"
   end
 
   def welcome
