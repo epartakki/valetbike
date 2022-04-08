@@ -19,9 +19,25 @@ class SessionsController < ApplicationController
   end
 
   def login
+    render "views/sessions/login"
   end
 
   def welcome
+  end
+
+  def about
+  end
+
+  def faq
+  end
+
+  def map
+  end
+
+  def pricing
+  end
+
+  def account
   end
 
 
