@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  root to: "sessions#welcome"
 
+  root to: 'sessions#welcome'
+  
   resources :users, only: [:new, :create, :checkout]
 
+  get 'about', to: 'sessions#about'
+  get 'map', to: 'sessions#map'
   get 'login', to: 'sessions#login'
-  post 'login', to: 'sessions#login'
-  put 'login', to: 'sessions#login'
+  post 'login', to: 'sessions#create'
   get 'welcome', to: 'sessions#welcome'
   get 'about', to: 'sessions#about'
   get 'FAQ', to: 'sessions#FAQ'
