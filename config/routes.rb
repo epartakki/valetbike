@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#login'
   post 'login', to: 'sessions#login'
   put 'login', to: 'sessions#login'
+  get 'map', to: 'sessions#map'
   get 'welcome', to: 'sessions#welcome'
   get 'about', to: 'sessions#about'
   get 'FAQ', to: 'sessions#FAQ'
