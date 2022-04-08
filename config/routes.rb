@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'authorized', to: 'sessions#page_requires_login'
   get 'payment', to: 'sessions#payment'
   post 'logout', to: 'sessions#logout'
+  get 'account', to: 'sessions#account'
 
   resources :places
+
 end
