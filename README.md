@@ -7,9 +7,16 @@ Starter App for ValetBike project
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
-ADD info
+*Added new gems:*
+- `gem leaflet-rails` (not used)
+- `gem bcrypt` (not used)
 
-***
+*Frameworks*
+- Rails
+- Bootstrap (downloaded but not integrated, hope to use in MVP)
+
+*Package Manager*
+- Yarn (downloaded but not integrated, hope to use in tandem with Bootstrap in MVP)
 
 ## General Configuration Steps
 
@@ -21,7 +28,7 @@ ADD info
 * If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
 * If using `rails s` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
 
-* You should see ValetBike welcome page
+* You should see ValetBike welcome page, be able to click on log-in, and see a place where you can populate a username and password which we do not yet store
 
 ### Description of prototype functionality
 - Bare bones layout (Front-End and Back-End) 
@@ -50,11 +57,6 @@ ADD info
     > - `app/models`
     > - `app/views`
     > - `db/`
-    > - `payment.html`
-
-### Current error locations:
-- `app/models/user.rb`
-- `app/controllers/application_controller.rb`
 
 ### Citations
 - https://github.com/AnyKeyOrg/anykey
