@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
+  root to: 'sessions#welcome'
   
   resources :users, only: [:new, :create, :checkout]
 
+  get 'about', to: 'sessions#about'
+  get 'map', to: 'sessions#map'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'welcome', to: 'sessions#welcome'
@@ -12,5 +16,4 @@ Rails.application.routes.draw do
   post 'logout', to: 'sessions#logout'
 
   resources :places
-  root to: "sessions#welcome"
 end
