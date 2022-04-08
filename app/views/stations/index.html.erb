@@ -1,16 +1,20 @@
-<div class="page-section flexbox vertical stretch">
-  <div class="section-inner flexbox vertical stretch">
-    <div class="section-title">
-      Welcome to ValetBike!
-    </div>  
-    <div class="flexbox vertical stretch">
-      <% if @stations.present? %>
-        <%= render(partial: "stations/row", collection: @stations, as: :station) %>
-      <% else %>
-      <div class="empty">
-        No stations found.
-      </div>
-      <% end %>
-    </div>
-	</div>
-</div>
+<main>
+# <div class="page-section flexbox vertical stretch">
+#   <div class="section-inner flexbox vertical stretch">
+#     <div class="section-title">
+#       Welcome to ValetBike!
+#     </div>  
+#     <div class="flexbox vertical stretch">
+#       <% if @stations.present? %>
+#         <%= render(partial: "stations/row", collection: @stations, as: :station) %>
+#       <% else %>
+#       <div class="empty">
+#         No stations found.
+#       </div>
+#       <% end %>
+#     </div>
+# 	</div>
+# </div>
+<a href="app/views/pages/map.html">Find a Bike</a>
+
+</main>
