@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :authorized, only: [:new, :create, :welcome]
+  #skip_before_action :authorized, only: [:new, :create, :welcome]
 
   def new
   end
@@ -19,7 +19,11 @@ class SessionsController < ApplicationController
   end
 
   def login
-    render "views/sessions/login"
+    render "../views/sessions/login"
+  end
+
+  def signup
+    render "../views/sessions/signup"
   end
 
   def welcome

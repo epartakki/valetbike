@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#login'
   post 'login', to: 'sessions#login'
   put 'login', to: 'sessions#login'
+  get 'signup', to: 'sessions#signup'
+  post 'signup', to: 'sessions#signup'
+  put 'signup', to: 'sessions#signup'
+
   get 'map', to: 'sessions#map'
   get 'welcome', to: 'sessions#welcome'
   get 'about', to: 'sessions#about'
