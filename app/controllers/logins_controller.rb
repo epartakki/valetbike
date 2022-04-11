@@ -3,7 +3,7 @@ class LoginsController < ApplicationController
     def create
         if user = User.authenticate([:username], params[:password])
             session[:current_user_id] = user.id
-            redirect_to #change to root url
+            redirect_to root_path
         end
     end
 
@@ -11,6 +11,6 @@ class LoginsController < ApplicationController
     def destroy
         session.delete(:current_user_id)
         @_current_user = nil
-        redirect_to #change to rool url
+        redirect_to root_path
     end
 end

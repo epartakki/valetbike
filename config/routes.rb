@@ -1,21 +1,32 @@
 Rails.application.routes.draw do
 
+  # homepage
   root to: 'sessions#welcome'
+  # get 'home', to: "home#index"
+
+  # static pages
+  get 'about', to: 'static_pages#about'
+  get 'faq', to: 'static_pages#faq'
+
+  # routes for map
+  get 'map', to: 'map#index'
   
-  resources :users, only: [:new, :create, :checkout]
+  resources :bikes, only: [:read]
+  resources :stations, only: [:read]
 
-  get 'login', to: 'sessions#login'
-  post 'login', to: 'sessions#login'
-  put 'login', to: 'sessions#login'
-  get 'map', to: 'sessions#map'
-  get 'welcome', to: 'sessions#welcome'
-  get 'about', to: 'sessions#about'
-  get 'FAQ', to: 'sessions#FAQ'
-  get 'authorized', to: 'sessions#page_requires_login'
-  get 'payment', to: 'sessions#payment'
-  post 'logout', to: 'sessions#logout'
-  get 'account', to: 'sessions#account'
+  # routes for pricing/payment
+  get   'pricing', to: 'pricing#index'
+  get   'payment', to: 'pricing#payment'
 
-  resources :places
+  # routes for signup/login/logout
+  resources :users, only: [:new, :create] # user for creating a new user (signing up)
+
+  get   'login',  to: 'sessions#new'
+  post  'login',  to: 'sessions#create' # logs in a user by creating a new session
+
+  get   'account', to: 'sessions#account' # requires authorization to access acount page
+  post  'logout', to: 'sessions#destroy' # logs user out
+
+  # resources :places
 
 end
