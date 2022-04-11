@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  #skip_before_action :authorized, only: [:new, :create, :welcome]
+  skip_before_action :authorized, only: [:new, :create, :welcome]
 
   def new
   end
@@ -33,12 +33,14 @@ class SessionsController < ApplicationController
   end
 
   def faq
+    render "../views/sessions/faq"
   end
 
   def map
   end
 
   def pricing
+    render "../views/sessions/pricing"
   end
 
   def account
