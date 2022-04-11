@@ -1,3 +1,6 @@
+<% # Sign-in Page, called when we want a new user, submits to create User %>
+
+<div>
 <h1>Sign Up</h1>
 <%= form_for @user do |f|%>
   <%= f.label :username%><br>
@@ -6,3 +9,4 @@
   <%= f.password_field :password%><br>
   <%= f.submit %>
 <%end%>
+</div>

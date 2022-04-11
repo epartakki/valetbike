@@ -12,54 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2022_04_04_042316) do
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  create_table "available_bikes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "identifier"
+  create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "current_station_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "bike_stations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "identifier"
-    t.string "name"
-    t.string "address"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "identifier"
-=======
-  create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
->>>>>>> origin/master
-=======
-  create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
->>>>>>> df0d1f3c8ff071d422ecedd1738a3b3e71b6772c
-    t.integer "current_station_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  create_table "places", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.decimal "latitude", precision: 10
-    t.decimal "longitude", precision: 10
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "stations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "identifier"
-=======
   create_table "places", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
->>>>>>> origin/master
-=======
-  create_table "places", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
->>>>>>> df0d1f3c8ff071d422ecedd1738a3b3e71b6772c
     t.string "name"
     t.decimal "latitude", precision: 10
     t.decimal "longitude", precision: 10
@@ -77,10 +36,6 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
     t.integer "end_station_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "has_kiosk"
-    t.integer "needs_maintenance"
-    t.integer "dock_count"
-    t.integer "docked_bike_count"
   end
 
   create_table "stations", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
@@ -92,14 +47,6 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "username"
     t.string "password"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone_number"
-    t.integer "miles_ridden"
-    t.integer "ride_count"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
