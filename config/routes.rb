@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :stations, only: [:read]
 
   # routes for pricing/payment
-  get   'pricing', to: 'pricing#index'
+  get   'pricing', to: 'static_pages#pricing'
   get   'payment', to: 'sessions#payment'
 
   # routes for signup/login/logout
