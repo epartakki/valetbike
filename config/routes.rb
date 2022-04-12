@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # routes for pricing/payment
   get   'pricing', to: 'pricing#index'
-  get   'payment', to: 'pricing#payment'
+  get   'payment', to: 'sessions#payment'
 
   # routes for signup/login/logout
   resources :users, only: [:new, :create] # user for creating a new user (signing up)
