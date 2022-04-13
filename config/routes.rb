@@ -2,20 +2,21 @@ Rails.application.routes.draw do
 
   # homepage
   root to: 'sessions#welcome'
+  # root to: 'static_pages#home'
   # get 'home', to: "home#index"
 
   # static pages
-  get 'about', to: 'static_pages#about'
-  get 'faq', to: 'static_pages#faq'
+  get 'about', to: 'sessions#about'
+  get 'faq', to: 'sessions#faq'
 
   # routes for map
-  get 'map', to: 'map#index'
+  get 'map', to: 'sessions#map'
   
   resources :bikes, only: [:read]
   resources :stations, only: [:read]
 
   # routes for pricing/payment
-  get   'pricing', to: 'static_pages#pricing'
+  get   'pricing', to: 'sessions#pricing'
   get   'payment', to: 'sessions#payment'
 
   # routes for signup/login/logout

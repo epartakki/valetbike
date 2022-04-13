@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :authorized, only: [:new, :create, :welcome] #anything listed here can be viewed w/o logging in/authorization
+  skip_before_action :authorized, only: [:new, :create, :welcome, :about, :map, :faq, :pricing] #anything listed here can be viewed w/o logging in/authorization
 
   def new
   end
@@ -28,6 +28,12 @@ class SessionsController < ApplicationController
   end
 
   def welcome
+  end
+
+  def faq
+  end
+
+  def pricing
   end
 
 end
