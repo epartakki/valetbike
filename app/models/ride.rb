@@ -1,9 +1,7 @@
 class Ride < ApplicationRecord
-    validates_presence_of   :identifier,
-                            :start_time,
-                            :end_time;
-                            :duration;
-    validates_uniqueness_of :identifier
+    validates_presence_of   :start_time,
+                            :end_time
+                            :duration
 
     has_one :user, class_name :User, foreign_key :user_id
     has_one :bike, class_name :Bike, foreign_key :bike_id
