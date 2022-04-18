@@ -17,8 +17,6 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
     t = Station.new
     t.id = row['identifier']
-    t.lat = 0
-    t.lng = 0
     t.name = row['name']
     # t.has_kiosk = row['has_kiosk']
     # t.needs_maintenance = row['needs_maintenance']
@@ -41,6 +39,6 @@ end
 #     )
 # end
 
-places = Place.create([{ name: "Northampton" }, { name: "Florence"}])
-Primary.create(name:"Smith College", place: places.first)
+# places = Place.create([{ name: "Northampton" }, { name: "Florence"}])
+# Primary.create(name:"Smith College", place: places.first)
 

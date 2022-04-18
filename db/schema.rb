@@ -40,8 +40,6 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
 
   create_table "stations", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "name"
-    t.decimal "lat", precision: 10
-    t.decimal "lng", precision: 10
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
