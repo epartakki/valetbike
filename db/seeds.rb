@@ -17,12 +17,15 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
     t = Station.new
     t.id = row['identifier']
+    t.lat = 0
+    t.lng = 0
     t.name = row['name']
-    t.has_kiosk = row['has_kiosk']
-    t.needs_maintenance = row['needs_maintenance']
-    t.total_slots = row['dock_count']
-    t.available_slots = row['docked_bike_count']
-    t.address = row['address']
+    # t.has_kiosk = row['has_kiosk']
+    # t.needs_maintenance = row['needs_maintenance']
+    # t.total_slots = row['dock_count']
+    # t.available_slots = row['docked_bike_count']
+    # t.address = row['address']
+    t.save
 end
 
 # CSV.foreach(Rails.root.join('notes/station-data.csv'), headers: true) do |row|
