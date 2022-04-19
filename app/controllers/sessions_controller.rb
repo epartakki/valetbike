@@ -21,10 +21,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @_current_user = nil
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     redirect_to root_path
   end
 
