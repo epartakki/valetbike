@@ -4,20 +4,17 @@ class ApplicationController < ActionController::Base
     helper_method :current_user
     helper_method :logged_in?
 
-    private
-
-    # Find user with id stored in the session
+    # stores user id in the current session
     def current_user
-        @current_user ||= session[:current_user_id] && # if there is not a current user, assign to the user of the current session
-            User.find_by(id: session[:current_user_id])
+      User.find_by(id: session[:user_id])
     end
   
     def logged_in?
-        !current_user.nil?
+      !current_user.nil?
     end
   
     def authorized
-      #redirect_to '/welcome' unless logged_in?
+      redirect_to root_path unless logged_in?
     end
 
 end
