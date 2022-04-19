@@ -11,7 +11,3 @@ class User < ApplicationRecord
     has_many :rides, class_name: :Ride, foreign_key: :user_id
 end
 
-# class User < ActiveRecord::Base
-#   has_secure_password
-#   self.primary_keys = :name
-# end

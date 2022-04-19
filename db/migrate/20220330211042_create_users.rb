@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
         # t.integer   :identifier, auto_increment: true, null: false
         t.string    :username
         t.string    :password
+        t.string    :name
+        t.string    :email
 
         t.timestamps
     end
