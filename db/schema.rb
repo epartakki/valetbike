@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
     t.integer "identifier"
     t.string "name"
     t.string "address"
+    t.decimal "lat", precision: 10
+    t.decimal "lng", precision: 10
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
