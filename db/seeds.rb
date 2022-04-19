@@ -20,8 +20,8 @@ csv.each do |row|
   # t.total_slots = row['dock_count']
   # t.available_slots = row['docked_bike_count']
   t.address = row['address']
-  t.lat = 0 # row['lat']
-  t.lng = 0 # row['lng']
+  t.lat = row['latitude']
+  t.lng = row['longitude']
   t.save
 end
 
