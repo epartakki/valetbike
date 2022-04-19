@@ -5,9 +5,16 @@ Rails.application.routes.draw do
   # root to: 'static_pages#home'
   # get 'home', to: "home#index"
 
+<<<<<<< HEAD
   # static pages
   get 'about', to: 'sessions#about'
   get 'faq', to: 'sessions#faq'
+=======
+  get 'login', to: 'sessions#login'
+  post 'login', to: 'sessions#login'
+  put 'login', to: 'sessions#login'
+  get 'map', to: 'sessions#map'
+>>>>>>> origin/master
   get 'welcome', to: 'sessions#welcome'
 
   # routes for map
