@@ -10,4 +10,3 @@ class User < ApplicationRecord
 
     has_many :rides, class_name: :Ride, foreign_key: :user_id
 end
-
