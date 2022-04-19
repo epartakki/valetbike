@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 
         redirect_to root_path
     else
+        # flash[:alert] = "something went wrong rip"
         redirect_to '/login'
     end
   end

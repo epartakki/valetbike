@@ -28,7 +28,8 @@ end
 # generate random users (ALINE TASK??)
 # for num in 1..10 do
 #   u = User.new
-#   u.username = "kevin"
-#   u.password = "test"
+#   generate random user
+#   u.username = "kevin" # fill w/ random username
+#   u.password = "test" # fill w/ random pw
 #   u.save
 # end
