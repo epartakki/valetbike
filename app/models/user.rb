@@ -1,18 +1,12 @@
 class User < ApplicationRecord
-    has_secure_password
+    # https://stackoverflow.com/questions/12746280/define-a-unique-primary-key-based-on-2-columns
+    # has_secure_password # using bcrypt gem
 
-    validates_presence_of   :identifier,
-                            :username,
-                            :password,
-                            :first_name,
-                            :last_name,
-                            :email,
-                            :phone_number,
-                            :miles_ridden,   #depends on rides
-                            :ride_count    #depends on rides
+    # validates_presence_of   :identifier,
+    #                         :username,
+    #                         :password
     
-    validates_uniqueness_of :identifier,
-                            :username
+    # validates_uniqueness_of :identifier
 
-    belongs_to :rides, class_name: :Ride, foreign_key: :user_id
+    has_many :rides, class_name: :Ride, foreign_key: :user_id
 end

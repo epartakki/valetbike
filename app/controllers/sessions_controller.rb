@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :authorized, only: [:new, :create, :welcome]
+  skip_before_action :authorized, only: [:new, :create, :welcome, :about, :map, :faq, :pricing] #anything listed here can be viewed w/o logging in/authorization
 
   def new
   end
@@ -11,34 +11,32 @@ class SessionsController < ApplicationController
 
         session[:user_id] = @user.id
 
-        redirect_to '/welcome'
+        redirect_to root_path
     else
+        # flash[:alert] = "something went wrong rip"
         redirect_to '/login'
     end
-
   end
 
-  def login
-    render "views/sessions/login"
-  end
-
-  def welcome
-  end
-
-  def about
-  end
-
-  def faq
-  end
-
-  def map
-  end
-
-  def pricing
+  def destroy
+    session.delete(:user_id)
+    @_current_user = nil
+    redirect_to root_path
   end
 
   def account
   end
 
+  def payment
+  end
+
+  def welcome
+  end
+
+  def faq
+  end
+
+  def pricing
+  end
 
 end

@@ -6,26 +6,10 @@
 <h1>Welcome to ValetBike by KALES</h1>
 <h2>Aline, Eleni, Kat, Lucie, Sunni</h2>
 <h3>Your local software engineering learners</h3>
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+<%end%>
 
 <br/>
 <img src="/assets/download.jpg" alt = "Background">
-
-<br/>
-
-
-<% if logged_in? %>
-    <meta http-equiv="Refresh" content="0; url='http://localhost:9292/authorized'" />
-<%end%>
-
-<%= button_to "Login", '/login', method: :get%>
-<br/>
-<%= button_to "Sign Up", '/signup', method: :get%>
-<br/>
-<%= button_to "About", '/about', method: :get%>
-<br/>
-<%= button_to "Map", '/map', method: :get%>
-<br/>
-<%= button_to "Pricing", '/pricing', method: :get%>
-<br/>
-<%= button_to "FAQ", '/faq', method: :get%>
 <br/>

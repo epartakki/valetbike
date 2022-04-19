@@ -1,15 +1,15 @@
-identifier,name,has_kiosk,needs_maintenance,dock_count,docked_bike_count,address
-21,Florence Bank Station,0,0,7,4,19 Meadow Street Florence MA @ Lilly Library
-24,Florence Center,0,0,10,2,31 Main Street Florence MA
-30,Jackson Street,0,0,16,8,7A-7D Jackson Street Northampton MA
-25,Cooley Dickinson Health Care,0,1,14,6,51 Locust Street Northampton MA
-29,State St/Mass Central Rail Trail,0,0,10,4,State Street/Mass Central Rail Trail
-33,Northampton High School,0,0,15,8,380 Elm Street Northampton MA
-20,Village Hill/State Hospital,0,0,14,6,Village Hill/State Hospital
-26,John M Greene Hall/Smith College,0,0,16,5,1 Chapin Way Northampton MA @ John M. Greene Hall
-23,Forbes Library,0,0,13,6,20 West Street Northampton MA
-27,Pulaski Park/Downtown,1,0,11,3,274 Main Street Northampton MA at Pulaski Park
-31,Main Street/Court House,0,1,10,3,99 Main Street Northampton MA
-28,Northampton Train Station,1,0,13,5,Northampton Train Station
-32,Main Street/Bridge Street,0,0,15,8,1 Bridge Street Northampton MA
-22,YMCA/Childs Park,0,0,17,8,YMCA/Childs Park
+identifier,name,has_kiosk,needs_maintenance,dock_count,docked_bike_count,address,latitude,longitude
+21,Florence Bank Station,0,0,7,4,19 Meadow Street Florence MA @ Lilly Library,42.335320,-72.673887
+24,Florence Center,0,0,10,2,31 Main Street Florence MA,42.334974700387384,-72.66805281744728
+30,Jackson Street,0,0,16,8,7A-7D Jackson Street Northampton MA,42.33021664753918,-72.64513733093953
+25,Cooley Dickinson Health Care,0,1,14,6,51 Locust Street Northampton MA,42.33219247439513,-72.65363520818842
+29,State St/Mass Central Rail Trail,0,0,10,4,State Street/Mass Central Rail Trail,42.33602149607951,-72.6677770309394
+33,Northampton High School,0,0,15,8,380 Elm Street Northampton MA,42.32531173664254,-72.65063686771232
+20,Village Hill/State Hospital,0,0,14,6,Village Hill/State Hospital,42.31174335940823,-72.64730458834424
+26,John M Greene Hall/Smith College,0,0,16,5,1 Chapin Way Northampton MA @ John M. Greene Hall,42.319583181186346,-72.63766190065897
+23,Forbes Library,0,0,13,6,20 West Street Northampton MA,42.31676281165675,-72.63527377564934
+27,Pulaski Park/Downtown,1,0,11,3,274 Main Street Northampton MA at Pulaski Park,42.31811114189796,-72.63290846030536
+31,Main Street/Court House,0,1,10,3,99 Main Street Northampton MA,42.319729167588015,-72.63040018305645
+28,Northampton Train Station,1,0,13,5,Northampton Train Station,42.31860873702226,-72.62662940545756
+32,Main Street/Bridge Street,0,0,15,8,1 Bridge Street Northampton MA,42.32061406933322,-72.62805568676004
+22,YMCA/Childs Park,0,0,17,8,YMCA/Childs Park,42.32922966608799,-72.6440742940204

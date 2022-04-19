@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_04_042316) do
 
+<<<<<<< HEAD
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "current_station_id"
     t.datetime "created_at", precision: 6, null: false
@@ -58,3 +58,12 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
   end
 
 end
+=======
+
+<<<<<<< HEAD
+
+end
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
