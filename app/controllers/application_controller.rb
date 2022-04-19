@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
     # Find user with id stored in the session
     def current_user
-        @_current_user ||= session[:current_user_id] && # if there is not a current user, assign to the user of the current session
+        @current_user ||= session[:current_user_id] && # if there is not a current user, assign to the user of the current session
             User.find_by(id: session[:current_user_id])
     end
   

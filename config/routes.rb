@@ -1,34 +1,37 @@
 Rails.application.routes.draw do
 
+  # homepage
   root to: 'sessions#welcome'
-  
-  resources :users, only: [:new, :create, :checkout]
+  # root to: 'static_pages#home'
+  # get 'home', to: "home#index"
 
-  get 'login', to: 'sessions#login'
-  post 'login', to: 'sessions#login'
-  put 'login', to: 'sessions#login'
-
-  get 'signup', to: 'sessions#signup'
-  post 'signup', to: 'sessions#signup'
-  put 'signup', to: 'sessions#signup'
-
-  get 'pricing', to: 'sessions#pricing'
-  post 'pricing', to: 'sessions#pricing'
-  put 'pricing', to: 'sessions#pricing'
-
-  get 'payment', to: 'sessions#payment'
-  post 'payment', to: 'sessions#payment'
-  put 'payment', to: 'sessions#payment'
-
-
-  get 'map', to: 'sessions#map'
-  get 'welcome', to: 'sessions#welcome'
+  # static pages
   get 'about', to: 'sessions#about'
   get 'faq', to: 'sessions#faq'
-  get 'authorized', to: 'sessions#page_requires_login'
-  post 'logout', to: 'sessions#logout'
-  get 'account', to: 'sessions#account'
+  get 'welcome', to: 'sessions#welcome'
 
-  resources :places
+  # routes for map
+  get 'map', to: 'sessions#map'
+  
+  resources :bikes, only: [:read]
+  resources :stations, only: [:read]
+
+  # routes for pricing/payment
+  get   'pricing', to: 'sessions#pricing'
+  get   'payment', to: 'sessions#payment'
+
+  # routes for signup/login/logout
+  resources :users, only: [:new, :create] # user for creating a new user (signing up)
+
+  get   'login',  to: 'sessions#new'
+  post  'login',  to: 'sessions#create' # logs in a user by creating a new session
+
+  get   'signup',  to: 'sessions#signup'
+  post  'signup',  to: 'sessions#signup' # logs in a user by creating a new session
+
+  get   'account', to: 'sessions#account' # requires authorization to access acount page
+  post  'logout', to: 'sessions#destroy' # logs user out
+
+  # resources :places
 
 end

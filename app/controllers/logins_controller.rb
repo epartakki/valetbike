@@ -3,7 +3,7 @@ class LoginsController < ApplicationController
     def create
         if user = User.authenticate([:username], params[:password])
             session[:current_user_id] = user.id
-            redirect_to #change to root url
+            redirect_to root_path #change to root url
         end
     end
 
