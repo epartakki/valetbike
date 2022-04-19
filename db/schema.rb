@@ -12,6 +12,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "current_station_id"
     t.datetime "created_at", precision: 6, null: false
@@ -67,3 +68,6 @@ end
 =======
 >>>>>>> origin/master
 >>>>>>> origin/master
+=======
+
+>>>>>>> 23a28c9e237edd73b07fbe7d3b9d0b0903293700
