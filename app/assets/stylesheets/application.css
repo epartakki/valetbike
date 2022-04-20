@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+ .navbar {
+    padding: 0.25rem 0.5rem;
+    background-color: #1C0F13 !important;
+}
+
+.brandbox {
+    width: 12%;
+    padding-right: 0px;
+}
+
+.navbar-brand {
+    margin-right: 0.5rem;
+}
+
+.navbar-brand img {
+    width: 100%;
+    filter: invert(1);
+}
+
+.nav-link {
+    color: white !important;
+}
+
+header {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(banner.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 13vw;
+    max-height: 500px;
+}
+
+main {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+}

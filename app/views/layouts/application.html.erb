@@ -17,8 +17,12 @@
   </head>
   <body>
     <div id="site-container" class="flexbox vertical stretch flex-1">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">ValetBike</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container brandbox">
+        <a class="navbar-brand" href="#">
+          <img src="logo_short.png" alt="">
+        </a>
+      </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,6 +59,9 @@
           </ul>
         </div>
       </nav>
+
+      <header>
+      </header>
       <main>
         <div class="flexbox vertical center">
           <%= yield %>
