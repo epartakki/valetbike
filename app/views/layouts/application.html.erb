@@ -18,7 +18,7 @@
   <body>
     <div id="site-container" class="flexbox vertical stretch flex-1">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">ValetBike</a>
+        <a class="navbar-brand" href="/">ValetBike</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,12 +36,22 @@
           <li class="nav-item active">
             <%= link_to "FAQ", "/faq", class: "nav-link" %>
           </li>
-          <li class="nav-item active">
-            <%= link_to "Signup", "/signup", class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Login", "/login", class: "nav-link" %>
-          </li>
+          <% if logged_in? %>
+            <li class="nav-item active">
+              <%= link_to "Account", "/account", class: "nav-link", method: :get %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Logout", "/logout", class: "nav-link", method: :post %>
+            </li>
+            <h2>Welcome, <%=current_user.username%> </h2>
+          <% else %>
+            <li class="nav-item active">
+              <%= link_to "Signup", new_user_path, class: "nav-link", method: :get %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Login", "/login", class: "nav-link", method: :get %>
+            </li>
+          <% end %>
           </ul>
         </div>
       </nav>

@@ -97,24 +97,6 @@ map.panTo(latLon).fitBounds(bounds);
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map); //Adds to established map
 
-//Creates markers with bike icon and adds to the map
-<% @stations.each do |s|%>
-  <% if Bike.where(:current_station_identifier => s.identifier).all.count ==0 %>
-    L.marker([<%= s.latitude %>, <%= s.longitude %>], {icon: bikeIconDisactivated}).addTo(map)
-      .bindPopup('<%= s.name %>'
-                +'<br>No bike available') //Adds pop up description
-      .openPopup();
-  <% else %>
-  //Creates a marker after reading in coordinates from csv with bike stations
-  L.marker([<%= s.latitude %>, <%= s.longitude %>], {icon: bikeIcon}).addTo(map)
-    .bindPopup('<%= s.name %>'
-              +'<br><%= Bike.where(:current_station_identifier => s.identifier).all.count %> bike available') //Adds pop up description
-    .openPopup();
-  <% end %>
-<% end %>
-
-//Adds Geolocation to the map to allow user to locate where they are on the map
-  L.control.locate().addTo(map);
 
 </script>
 

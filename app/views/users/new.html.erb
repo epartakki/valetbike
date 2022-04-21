@@ -1,8 +1,23 @@
+<% # Sign-in Page, called when we want a new user, submits to create User %>
+
+<div>
+<br>
 <h1>Sign Up</h1>
-<%= form_for @user do |f|%>
-  <%= f.label :username%><br>
-  <%= f.text_field :username%><br>
-  <%= f.label :password%><br>
-  <%= f.password_field :password%><br>
-  <%= f.submit %>
+<br>
+<%= form_with model: @user do |f|%>
+  <% #username input %>
+  <div class="form-outline mb-4">
+    <%= f.text_field :username, class: "form-control", id: "form-signup-username"%><br>
+    <%= f.label :username, class: "form-label", for: "form-signup-username" %><br>
+  </div>
+  <% #password input %>
+  <div class="form-outline mb-4">
+    <%= f.password_field :password, class: "form-control", id: "form-signup-pw"%><br>
+    <%= f.label :password, class: "form-label", for: "form-signup-pw" %><br>
+  </div>
+  
+  <div class="text-center">
+  <%= f.submit "Create User", class: "btn btn-primary btn-block mb-4" %>
+  </div>
 <%end%>
+</div>

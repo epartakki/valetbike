@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app/views/sessions/login.html.erb
+<<<<<<< HEAD
 <form class="py-5">
   <div class="card">
   <div class="card-header text-center">Login</div>
@@ -21,6 +23,24 @@
         <input type="password" id="form2Example2" class="form-control" />
         <label class="form-label" for="form2Example2">Password</label>
       </div>
+<% # Login Page, called when a new session is made %>
+
+<div>
+<br>
+<h1> Login </h1>
+<br>
+<form>
+  <!-- Username input -->
+  <div class="form-outline mb-4">
+    <input type="username" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Username</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
 
   <!-- 2 column grid layout for inline styling -->
   <div class="row mb-4">
@@ -48,5 +68,13 @@
     <p>Not a member? <a href="/signup">Sign Up</a></p>
   </div>
   </div>
+  
+  <% # <!-- Submit button --> %>
+  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="#!">Sign Up</a></p>
   </div>
 </form>
+</div>
