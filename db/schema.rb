@@ -58,4 +58,7 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
   end
 
 end
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
