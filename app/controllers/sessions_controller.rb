@@ -28,6 +28,9 @@ class SessionsController < ApplicationController
   end
 
   def payment
+    if !logged_in?
+      redirect_to '/login'
+    end
   end
 
   def welcome
