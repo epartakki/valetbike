@@ -6,8 +6,10 @@
 <h1>Welcome to ValetBike by KALES</h1>
 <h2>Aline, Eleni, Kat, Lucie, Sunni</h2>
 <h3>Your local software engineering learners</h3>
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+<%end%>
 
 <br/>
 <img src="/assets/download.jpg" alt = "Background">
-
 <br/>
