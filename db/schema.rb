@@ -10,9 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2022_04_04_042316) do
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "current_station_id"
     t.datetime "created_at", precision: 6, null: false
@@ -40,34 +39,22 @@
   end
 
   create_table "stations", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.integer "identifier"
     t.string "name"
+    t.string "address"
     t.decimal "lat", precision: 10
     t.decimal "lng", precision: 10
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "username"
     t.string "password"
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "email"
-    t.string "phone_number"
-    t.integer "miles_ridden"
-    t.integer "ride_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
 end
-=======
-
-<<<<<<< HEAD
-
-end
-
-=======
->>>>>>> origin/master
->>>>>>> origin/master
-=======
-
->>>>>>> 23a28c9e237edd73b07fbe7d3b9d0b0903293700
