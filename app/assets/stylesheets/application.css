@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- .navbar {
+.navbar {
     padding: 0.25rem 0.5rem;
     background-color: #1C0F13 !important;
 }
@@ -34,12 +34,22 @@
 
 .nav-link {
     color: white !important;
+    text-decoration: underline #c0a9b0 solid 30%;
+    text-decoration-skip-ink: none;
+    text-transform: uppercase;
+    transition: .6s;
+    transition-timing-function: ease-out;
+}
+
+.nav-link:hover {
+    text-decoration-color: #1C0F13;
+    color: #dcd0d4 !important;
 }
 
 header {
     margin: 0px;
     padding: 0px;
-    background-image: url(banner.jpg);
+    background-image: url(/assets/banner.jpg);
     background-repeat: repeat-x;
     background-size: contain;
     height: 13vw;
@@ -50,4 +60,14 @@ main {
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 2%;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f7ebef !important;
+    color: #7d223d !important;
+}
+
+.accordion-button:focus {
+    border-color: #f7779d;
+    box-shadow: 0 0 0 .25rem rgba(100, 35, 53, 0.25);
 }
