@@ -1,45 +1,123 @@
-<h1>Map</h1>
+<html lang = "en">
+<head>
 
-<div id="map" style="width: 900px; height: 500px"></div>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css%22%3E
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+  <style type="text/css">
+    .Access_Title {
+      background-color: #286090;
+      color: #FFFFFF;
+      height: 75px;
+      width: 100%;
+      text-align: center;
+    }
+    .map {
+      background-color: #E6F4F1;
+    }
+    .checkin {
+      width: 50%;
+      background-color: #E6F4F1;
+      padding: 20px;
+      text-align: center;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 960px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<br></br>
+
+<div class = "Access_Title">
+  <h1>Enjoy your bike ride, <%= current_user.first_name %></h1>
+</div>
+
+<br></br>
+
+<div class = "checkin">
+  <h2>Bike ID : <%= current_user.current_bike_id %></h2>
+  <%=button_to "Check in your bike", '/checkin', method: :get%>
+</div>
+
+<br></br>
+
+<% unless @stations.present? %>
+<div class="empty">
+  No stations found.
+</div>
+<% end %>
+
+<div class = "map">
+<div id="map"> </div>
 
 <script>
-var marker = L.icon({
-    	iconUrl: 'marker.png',
+
+//Reads in bike.svg file to create animated icon
+//Creates a bikeIcon to call upon at designated sizes and anchor points when bikes are available
+var bikeIcon = L.icon({
+    	iconUrl: 'bike.svg',
     	iconSize: [50, 50],
-    	iconAnchor: [37.5, 75]
+    	iconAnchor: [25,0]
     });
 
-// Set lat and lng
+//Creates a bikeIcon of the same style with different color in order to indicated empty stations
+var bikeIconDisactivated = L.icon({
+    	iconUrl: 'bike-disactivated.svg',
+    	iconSize: [50, 50],
+    	iconAnchor: [25,0]
+    });
+
+//Establishes the latitude, longitutde, and bounds
 var latLon = L.latLng(42.32529052324533, -72.65033251578427);
 var bounds = latLon.toBounds(3000); // 3000 = metres
 
-// Map creation
+//Creates the map and centers at coordiantes with zoom
   var map = L.map('map', {
-    center: L.latLng(42.32529052324533, -72.65033251578427),
+    center: L.latLng(42, -72),
     zoom: 13
 });
 
-// Coordinate focus
+
+//Pans to that coordinates
 map.panTo(latLon).fitBounds(bounds);
 
-// Creates the open street map tile layer and adds marker icon to it
+//Creates the open street map tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map); //Adds to established map
 
-  L.marker([42.319761695581136, -72.6378410255895], {icon: marker}).addTo(map)
-    .bindPopup('John M. Greene Hall/Smith College Station') //Adds pop up description
+//Creates markers with bike icon and adds to the map
+<% @stations.each do |s|%>
+  <% if Bike.where(:current_station_identifier => s.identifier).all.count ==0 %>
+    L.marker([<%= s.latitude %>, <%= s.longitude %>], {icon: bikeIconDisactivated}).addTo(map)
+      .bindPopup('<%= s.name %>'
+                +'<br>No bike available') //Adds pop up description
+      .openPopup();
+  <% else %>
+  //Creates a marker after reading in coordinates from csv with bike stations
+  L.marker([<%= s.latitude %>, <%= s.longitude %>], {icon: bikeIcon}).addTo(map)
+    .bindPopup('<%= s.name %>'
+              +'<br><%= Bike.where(:current_station_identifier => s.identifier).all.count %> bike available') //Adds pop up description
     .openPopup();
+  <% end %>
+<% end %>
 
-  L.marker([42.316778678292394, -72.63583167529939], {icon: marker}).addTo(map)
-    .bindPopup('Forbes Library Station') //Adds pop up description
-    .openPopup();
-
-  L.marker([42.3174215778964, -72.6330052660747], {icon: marker}).addTo(map)
-    .bindPopup('Pulaski Park/Downtown Station') //Adds pop up description
-    .openPopup();
-
-  L.marker([42.31974503347566, -72.6303143525796], {icon: marker}).addTo(map)
-    .bindPopup('Main Street/Court House Station') //Adds pop up description
-    .openPopup();
+//Adds Geolocation to the map to allow user to locate where they are on the map
+  L.control.locate().addTo(map);
 
 </script>
+
+</div>
+
+<br></br>
