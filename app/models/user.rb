@@ -8,5 +8,8 @@ class User < ApplicationRecord
     
     # validates_uniqueness_of :identifier
 
+    validates_presence_of   :username
+                            :password
+
     has_many :rides, class_name: :Ride, foreign_key: :user_id
 end
