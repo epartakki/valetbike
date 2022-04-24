@@ -5,6 +5,13 @@
       <div class="card-header text-center">Login</div>
         <div class="card-body">
 
+          <% flash.each do |type, msg| %>
+            <div style="color: RED;">
+              <%= msg %>
+            </div>
+          <% end %>
+          <br>
+
           <!-- Username input -->
           <div class="form-outline mb-4">
             <%= f.text_field :username, class: "form-control", id: "form-login-username" %>
