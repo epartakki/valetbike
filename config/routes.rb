@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   get   'payment', to: 'sessions#payment'
 
   # routes for signup/login/logout
-  resources :users, only: [:new, :create] # user for creating a new user (signing up)
+  resources :users, only: [:create] # user for creating a new user (signing up)
+  get   'signup', to: 'users#new'
 
   get   'login',  to: 'sessions#new'
   post  'login',  to: 'sessions#create' # logs in a user by creating a new session

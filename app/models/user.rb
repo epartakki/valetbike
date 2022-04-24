@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     # https://stackoverflow.com/questions/12746280/define-a-unique-primary-key-based-on-2-columns
-    # has_secure_password # using bcrypt gem
+    has_secure_password # using bcrypt gem
 
     # validates_presence_of   :identifier,
     #                         :username,

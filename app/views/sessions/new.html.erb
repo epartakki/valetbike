@@ -1,17 +1,10 @@
 <% # Login Page, called when a new session is made %>
-<div class=>
+<div class=>  
   <%= form_for(:session, url: '/login') do |f|%>
     <div class="card">
       <div class="card-header text-center">Login</div>
         <div class="card-body">
 
-        <% flash.each do |type, msg| %>
-          <div style="color:red;">
-            <%= msg %>
-          </div>
-        <% end %>
-          <br>
-          
           <!-- Username input -->
           <div class="form-outline mb-4">
             <%= f.text_field :username, class: "form-control", id: "form-login-username" %>
@@ -22,8 +15,8 @@
           <div class="form-outline mb-4">
             <%= f.password_field :password, class: "form-control", id: "form-login-pw"%>
             <%= f.label :password, class: "form-label", for: "form-login-pw"%>
-          </div>
-
+          </div>  
+          
           <!-- Submit button -->
           <div class="text-center">
             <%= f.submit "Login", class: "btn btn-primary btn-block mb-4" %>
