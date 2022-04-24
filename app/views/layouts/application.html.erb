@@ -46,7 +46,7 @@
             <h2>Welcome, <%=current_user.username%> </h2>
           <% else %>
             <li class="nav-item active">
-              <%= link_to "Signup", new_user_path, class: "nav-link", method: :get %>
+              <%= link_to "Signup", '/signup', class: "nav-link", method: :get %>
             </li>
             <li class="nav-item active">
               <%= link_to "Login", "/login", class: "nav-link", method: :get %>
