@@ -64,3 +64,38 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 
 ### Citations
 
+**Overall**
+- https://guides.rubyonrails.org/index.html
+​​- https://github.com/AnyKeyOrg/anykey 
+
+**Database**
+- https://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
+- https://codeamt.medium.com/ruby-hack-a-quick-way-to-update-existing-db-table-in-ruby-on-rails-aef0109e7b22 
+- https://edgeguides.rubyonrails.org/active_record_migrations.html 
+- https://www.inkoop.io/blog/how-to-update-a-column-directly-in-database-in-ruby-on-rails/
+- https://ninjadevel.com/seeding-database-ruby-on-rails/ 
+
+**Frontend**
+- https://getbootstrap.com/docs/5.1/getting-started/introduction/
+- https://www.w3schools.com/jquery/event_hover.asp 
+- https://flexboxfroggy.com/
+- https://picrew.me/image_maker/626197 
+
+**Controllers**
+- https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
+- https://www.tutorialspoint.com/ruby-on-rails/rails-controllers.htm 
+
+**Map**
+- https://womanonrails.com/leaflet 
+- https://medium.com/@anaharris/how-to-make-a-simple-map-app-using-ruby-on-rails-react-and-leaflet-part-2-frontend-9ae6aa3e08d4 
+- https://stackoverflow.com/questions/62968395/ruby-on-rails-accessing-database-values-for-javascript-file
+- https://leafletjs.com/index.html 
+- https://rubygems.org/gems/leaflet-rails/versions/1.7.0 
+
+**Login**
+- https://3rd-edition.railstutorial.org/book/log_in_log_out
+- https://mdbootstrap.com/docs/standard/extended/login/ 
+
+**Payment**
+- https://www.paypal.com/buttons/smart
+
