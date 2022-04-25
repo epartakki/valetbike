@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   # homepage
   root to: 'sessions#welcome'
-  # root to: 'static_pages#home'
-  # get 'home', to: "home#index"
 
   # static pages
   get 'about', to: 'sessions#about'
@@ -28,7 +26,5 @@ Rails.application.routes.draw do
 
   get   'account', to: 'sessions#account' # requires authorization to access acount page
   post  'logout', to: 'sessions#destroy' # logs user out
-
-  # resources :places
 
 end
