@@ -15,14 +15,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var lat;
-var lng;
-var name;
-
 <% Station.all.each do |s| %>
-  lat = <%= s.lat %>;
-  lng = <%= s.lng %>;
-  L.marker([lat, lng]).addTo(map).bindPopup('<%=s.name%>').openPopup();
+  <% if s.has_kiosk %>
+    L.marker([<%= s.lat %>, <%= s.lng %>]).addTo(map).bindPopup('<h6><%=s.name%></h6> \n <p> <%=s.address%> </p> \n <p> Available Slots: <%=s.available_slots%>/<%=s.total_slots%> </p> \n <p> Has a kiosk </p>');
+  <% else %>
+    L.marker([<%= s.lat %>, <%= s.lng %>]).addTo(map).bindPopup('<h6><%=s.name%></h6> \n <p> <%=s.address%> </p> \n Available Slots: <%=s.available_slots%>/<%=s.total_slots%>');
+  <% end %>
 <% end %>
 
 </script>
+
+<div class="find-a-bike">
+<%= link_to "Purchase a Membership to Rent a Bike", "/pricing", class: "find-a-bike" %>
+</div>

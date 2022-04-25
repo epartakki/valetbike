@@ -1,38 +1,32 @@
 <% # Login Page, called when a new session is made %>
-<div class=>  
+<div>  
   <%= form_for(:session, url: '/login') do |f|%>
     <div class="card">
       <div class="card-header text-center">Login</div>
-        <div class="card-body">
 
-          <% flash.each do |type, msg| %>
-            <div style="color: RED;">
-              <%= msg %>
-            </div>
-          <% end %>
-          <br>
+      <div class="card-body">
 
-          <!-- Username input -->
-          <div class="form-outline mb-4">
-            <%= f.text_field :username, class: "form-control", id: "form-login-username" %>
-            <%= f.label :username, class: "form-label", for: "form-login-username"%>
-          </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-4">
-            <%= f.password_field :password, class: "form-control", id: "form-login-pw"%>
-            <%= f.label :password, class: "form-label", for: "form-login-pw"%>
-          </div>  
-          
-          <!-- Submit button -->
-          <div class="text-center">
-            <%= f.submit "Login", class: "btn btn-primary btn-block mb-4" %>
-          </div>
-
-          <p>New user? <%= link_to "Sign up now!", '/signup' %></p>
-
+        <!-- Username input -->
+        <div class="form-outline mb-4">
+          <%= f.text_field :username, class: "form-control", id: "form-login-username" %>
+          <%= f.label :username, class: "form-label", for: "form-login-username"%>
         </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <%= f.password_field :password, class: "form-control", id: "form-login-pw"%>
+          <%= f.label :password, class: "form-label", for: "form-login-pw"%>
+        </div>  
+          
+        <!-- Submit button -->
+        <div class="text-center">
+          <%= f.submit "Login", class: "btn btn-primary btn-block mb-4" %>
+        </div>
+
+        <p class="text-center">New user? <%= link_to "Sign up now!", '/signup' %></p>
+
       </div>
+
     </div>
   <%end%>
 </div>
