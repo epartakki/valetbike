@@ -49,13 +49,6 @@ Starter App for ValetBike project
 | Google translate | Footer | Users select preferred language using a google drop down button and the site is translated into that language. |
 | Payment connection | Payment Page | Users are redirected to their Paypal or Venmo login after selecting their preferred membership. |
 
-- Sign-up, Users submit a form with username and password, creating a new user and saving them in the database.
-- Login, Users submit a form with username and password, the database is queried for a user with that username, if a user is found, the password is authenticate, and a new session is created.
-- Logout, Users click a button, sending a post request to destroy the current session
-- Interactive map of Nipmuc Notch (station iformation pulled from the database), the map page renders an interactive leaflet map with markers for each station. Station data is queried from the database
-- Google translate select language option
-- Payment connection to Paypal and Venmo
-
 ### Walkthrough for key features
 
 Welcome to KALES' Valetbike! Open up the link in your browser and you'll land on the **welcome page**. If you're hoping to use Valetbike as a non-english reader or someone just practicing their language learning, select your preferred language at the bottom of the page. Learn about Valetbike and the KALES team members on the **about page**. Peep those picrew renderings of the group! 
