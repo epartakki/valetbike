@@ -1,105 +1,46 @@
-<html lang = "en">
-<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+crossorigin=""/>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css%22%3E
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-  <style type="text/css">
-    .Access_Title {
-      background-color: #286090;
-      color: #FFFFFF;
-      height: 75px;
-      width: 100%;
-      text-align: center;
-    }
-    .map {
-      background-color: #E6F4F1;
-    }
-    .checkin {
-      width: 50%;
-      background-color: #E6F4F1;
-      padding: 20px;
-      text-align: center;
-    }
-    body{
-      margin: 0;
-      padding: 0;
-    }
-    #map {
-      width: 960px;
-      height: 500px;
-    }
-  </style>
-</head>
-
-<br></br>
-
-<div class = "Access_Title">
-  <h1>Enjoy your bike ride, <%= current_user.first_name %></h1>
-</div>
-
-<br></br>
-
-<div class = "checkin">
-  <h2>Bike ID : <%= current_user.current_bike_id %></h2>
-  <%=button_to "Check in your bike", '/checkin', method: :get%>
-</div>
-
-<br></br>
-
-<% unless @stations.present? %>
-<div class="empty">
-  No stations found.
-</div>
-<% end %>
-
-<div class = "map">
-<div id="map"> </div>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+  
+<div id="map" style="width: 600px; height: 400px;"></div>
 
 <script>
 
-//Reads in bike.svg file to create animated icon
-//Creates a bikeIcon to call upon at designated sizes and anchor points when bikes are available
-var bikeIcon = L.icon({
-    	iconUrl: 'bike.svg',
-    	iconSize: [50, 50],
-    	iconAnchor: [25,0]
-    });
-
-//Creates a bikeIcon of the same style with different color in order to indicated empty stations
-var bikeIconDisactivated = L.icon({
-    	iconUrl: 'bike-disactivated.svg',
-    	iconSize: [50, 50],
-    	iconAnchor: [25,0]
-    });
-
-//Establishes the latitude, longitutde, and bounds
-var latLon = L.latLng(42.32529052324533, -72.65033251578427);
-var bounds = latLon.toBounds(3000); // 3000 = metres
-
-//Creates the map and centers at coordiantes with zoom
-  var map = L.map('map', {
-    center: L.latLng(42, -72),
-    zoom: 13
-});
+var map = L.map('map').setView([42.325, -72.65], 14);
 
 
-//Pans to that coordinates
-map.panTo(latLon).fitBounds(bounds);
-
-//Creates the open street map tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map); //Adds to established map
+}).addTo(map);
 
+L.marker([42.33556971740149, -72.67393081024912]).addTo(map).bindPopup('Florence Bank Station').openPopup();
+
+L.marker([42.33526021481459, -72.66800990228894]).addTo(map).bindPopup('Florence Center Station').openPopup();
+
+L.marker([42.3374253858664, -72.64216761578386]).addTo(map).bindPopup('Jackson Street Station').openPopup();
+
+L.marker([42.332232131096525, -72.65396780228896]).addTo(map).bindPopup('Cooley Dickinson Health Care Station').openPopup();
+
+L.marker([42.32529052324533, -72.65033251578427]).addTo(map).bindPopup('Northampton High School Station').openPopup();
+
+L.marker([42.311313649781866, -72.64884118763331]).addTo(map).bindPopup('Village Hill/State Hospital Station').openPopup();
+
+L.marker([42.319761695581136, -72.6378410255895]).addTo(map).bindPopup('John M. Greene Hall/Smith College Station').openPopup();
+
+L.marker([42.316778678292394, -72.63583167529939]).addTo(map).bindPopup('Forbes Library Station').openPopup();
+
+L.marker([42.3174215778964, -72.6330052660747]).addTo(map).bindPopup('Pulaski Park/Downtown Station').openPopup();
+
+L.marker([42.31974503347566, -72.6303143525796]).addTo(map).bindPopup('Main Street/Court House Station').openPopup();
+
+L.marker([42.31902760504468, -72.62637552927946]).addTo(map).bindPopup('Northampton Train Station').openPopup();
+
+L.marker([42.32063786777759, -72.62806641578433]).addTo(map).bindPopup('Main Street/Bridge Street Station').openPopup();
+
+L.marker([42.32921618613204, -72.64820673951338]).addTo(map).bindPopup('YMCA/Childs Park Station').openPopup();
 
 </script>
-
-</div>
-
-<br></br>
