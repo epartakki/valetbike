@@ -149,3 +149,19 @@ header {
 .btn-primary:focus, .btn-primary:active {
     box-shadow: 0 0 0 .25rem rgba(56, 51, 71,.5);
 }
+
+#flex-item-1 {
+    flex: 0 0 30%;
+}
+
+#flex-item-2 {
+    flex: 0 0 70%;
+}
+
+.pfp {
+    max-width: 70%;
+}
+
+#secret {
+    display: inline-block;
+}
