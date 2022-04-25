@@ -63,13 +63,4 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 
 
 ### Citations
-- https://github.com/AnyKeyOrg/anykey
-- https://guides.rubyonrails.org/
-- https://www.digitalocean.com/community/tutorials/how-to-add-bootstrap-to-a-ruby-on-rails-application
-- https://www.digitalocean.com/community/tutorial_series/rails-on-containers
-- https://getbootstrap.com/docs/3.4/components/
-- https://getbootstrap.com/docs/3.3/getting-started/
-- https://stackoverflow.com/questions/42175701/rails-5-google-places-gem-error
-- https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
-- https://rubygems.org/gems/leaflet-rails/versions/1.7.0
-- https://picrew.me/image_maker/626197
+
