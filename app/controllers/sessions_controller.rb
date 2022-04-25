@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :authorized, only: [:new, :create, :welcome, :about, :map, :faq, :pricing] #anything listed here can be viewed w/o logging in/authorization
+  skip_before_action :authorized, only: [:new, :create, :welcome, :about, :map, :faq, :pricing, :payment] #anything listed here can be viewed w/o logging in/authorization
 
   def new
   end
 
   def create
-    @user = User.find_by(username: params[:username])
-    if @user && @user.authenticate(params[:password])
+    @user = User.find_by(username: params[:session][:username])
+    if @user && @user.authenticate(params[:session][:password])
 
         session[:user_id] = @user.id
 
@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @_current_user = nil
-
     redirect_to root_path
   end
 
@@ -29,6 +28,9 @@ class SessionsController < ApplicationController
   end
 
   def payment
+    if !logged_in?
+      redirect_to '/login'
+    end
   end
 
   def welcome

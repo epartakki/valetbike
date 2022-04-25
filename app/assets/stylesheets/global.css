@@ -12,6 +12,13 @@ html, body {
   height: 100%;
 }
 
+main {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 1.5%;
+}
+
 body {
   font-size: 12pt;
   -webkit-text-size-adjust:none;
@@ -46,6 +53,7 @@ body {
 
 .navbar-brand {
   margin-right: 0.5rem;
+  padding-right: 0px;
 }
 
 .navbar-brand img {
@@ -58,13 +66,17 @@ body {
   text-decoration: underline #c0a9b0 solid 30%;
   text-decoration-skip-ink: none;
   text-transform: uppercase;
-  transition: .6s;
+  transition: 1s;
   transition-timing-function: ease-out;
 }
 
 .nav-link:hover {
   text-decoration-color: #1C0F13;
   color: #dcd0d4 !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
 
 header {
@@ -85,4 +97,24 @@ header {
 .accordion-button:focus {
   border-color: #f7779d;
   box-shadow: 0 0 0 .25rem rgba(100, 35, 53, 0.25);
+}
+
+.find-a-bike {
+  background-color: var(--pink-color);
+  border-radius: 20px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 1.25em;
+  padding: .5em;
+  margin-top: 2em;
+}
+
+.find-a-bike a {
+  text-decoration: none;
+  transition: 1s;
+  transition-timing-function: ease-out;
+}
+
+.find-a-bike a:hover {
+  color: var(--raspberry-color);
 }

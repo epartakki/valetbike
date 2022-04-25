@@ -1,13 +1,10 @@
-<br/>
-<img src="/assets/logo.png" alt = "Background">
-<br/>
-<br/>
-
-<h1>Welcome to ValetBike by KALES</h1>
+<h1>Welcome to ValetBike</h1>
 <h2>Aline, Eleni, Kat, Lucie, Sunni</h2>
-<h3>Your local software engineering learners</h3>
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+<%end%>
+<div class="find-a-bike">
+<%= link_to "Find A Bike", "/map", class: "find-a-bike" %>
+</div>
 
-<br/>
-<img src="/assets/download.jpg" alt = "Background">
 
-<br/>

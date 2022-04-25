@@ -3,8 +3,6 @@
 Smith College CSC223: Software Engineering
 Starter App for ValetBike project
 
-![Screencap of what we have](screencap.png)
-
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
 *Added new gems:*
