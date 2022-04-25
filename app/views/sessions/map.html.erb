@@ -5,6 +5,11 @@ crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
   crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+<h1>Map</h1>
   
 <div id="map" style="width: 600px; height: 400px;"></div>
 
@@ -19,28 +24,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 L.marker([42.33556971740149, -72.67393081024912]).addTo(map).bindPopup('Florence Bank Station').openPopup();
 
-L.marker([42.33526021481459, -72.66800990228894]).addTo(map).bindPopup('Florence Center Station').openPopup();
-
-L.marker([42.3374253858664, -72.64216761578386]).addTo(map).bindPopup('Jackson Street Station').openPopup();
-
-L.marker([42.332232131096525, -72.65396780228896]).addTo(map).bindPopup('Cooley Dickinson Health Care Station').openPopup();
-
-L.marker([42.32529052324533, -72.65033251578427]).addTo(map).bindPopup('Northampton High School Station').openPopup();
-
-L.marker([42.311313649781866, -72.64884118763331]).addTo(map).bindPopup('Village Hill/State Hospital Station').openPopup();
-
-L.marker([42.319761695581136, -72.6378410255895]).addTo(map).bindPopup('John M. Greene Hall/Smith College Station').openPopup();
-
-L.marker([42.316778678292394, -72.63583167529939]).addTo(map).bindPopup('Forbes Library Station').openPopup();
-
-L.marker([42.3174215778964, -72.6330052660747]).addTo(map).bindPopup('Pulaski Park/Downtown Station').openPopup();
-
-L.marker([42.31974503347566, -72.6303143525796]).addTo(map).bindPopup('Main Street/Court House Station').openPopup();
-
-L.marker([42.31902760504468, -72.62637552927946]).addTo(map).bindPopup('Northampton Train Station').openPopup();
-
-L.marker([42.32063786777759, -72.62806641578433]).addTo(map).bindPopup('Main Street/Bridge Street Station').openPopup();
-
-L.marker([42.32921618613204, -72.64820673951338]).addTo(map).bindPopup('YMCA/Childs Park Station').openPopup();
+<% Station.all.each do |s| %>
+  <% if s.has_kiosk %>
+    L.marker([<%= s.lat %>, <%= s.lng %>]).addTo(map).bindPopup('<h6><%=s.name%></h6> \n <p> <%=s.address%> </p> \n <p> Available Slots: <%=s.available_slots%>/<%=s.total_slots%> </p> \n <p> Has a kiosk </p>');
+  <% else %>
+    L.marker([<%= s.lat %>, <%= s.lng %>]).addTo(map).bindPopup('<h6><%=s.name%></h6> \n <p> <%=s.address%> </p> \n Available Slots: <%=s.available_slots%>/<%=s.total_slots%>');
+  <% end %>
+<% end %>
 
 </script>
+<div class="find-a-bike">
+<%= link_to "Purchase a Membership to Rent a Bike", "/pricing", class: "find-a-bike" %>
+</div>

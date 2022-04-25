@@ -10,30 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_04_042316) do
+ActiveRecord::Schema.define(version: 2022_03_30_211042) do
 
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "current_station_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "places", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.string "name"
-    t.decimal "latitude", precision: 10
-    t.decimal "longitude", precision: 10
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "rides", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.time "duration"
-    t.integer "user_id"
-    t.integer "bike_id"
-    t.integer "start_station_id"
-    t.integer "end_station_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,17 +22,22 @@ ActiveRecord::Schema.define(version: 2022_04_04_042316) do
     t.integer "identifier"
     t.string "name"
     t.string "address"
-    t.decimal "lat", precision: 10
-    t.decimal "lng", precision: 10
+    t.boolean "has_kiosk"
+    t.boolean "needs_maintenance"
+    t.integer "total_slots"
+    t.integer "available_slots"
+    t.decimal "lat", precision: 16, scale: 13
+    t.decimal "lng", precision: 16, scale: 13
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.string "name"
     t.string "email"
+    t.text "fun_fact"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

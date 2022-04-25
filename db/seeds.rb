@@ -15,21 +15,12 @@ csv.each do |row|
   t = Station.new
   t.identifier = row['identifier']
   t.name = row['name']
-  # t.has_kiosk = row['has_kiosk']
-  # t.needs_maintenance = row['needs_maintenance']
-  # t.total_slots = row['dock_count']
-  # t.available_slots = row['docked_bike_count']
+  t.has_kiosk = row['has_kiosk']
+  t.needs_maintenance = row['needs_maintenance']
+  t.total_slots = row['dock_count']
+  t.available_slots = row['docked_bike_count']
   t.address = row['address']
   t.lat = row['latitude']
   t.lng = row['longitude']
   t.save
 end
-
-# generate random users (ALINE TASK??)
-# for num in 1..10 do
-#   u = User.new
-#   generate random user
-#   u.username = "kevin" # fill w/ random username
-#   u.password = "test" # fill w/ random pw
-#   u.save
-# end
