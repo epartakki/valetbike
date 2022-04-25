@@ -81,6 +81,7 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 - https://flexboxfroggy.com/
 - https://picrew.me/image_maker/626197 
 - https://kids.niehs.nih.gov/games/riddles/jokes/fun-facts-and-trivia/index.htm
+- https://stackoverflow.com/questions/10701124/jquery-replace-text-of-element-on-hover
 
 **Controllers**
 - https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
