@@ -3,7 +3,7 @@
 Smith College CSC223: Software Engineering
 Starter App for ValetBike project
 
-### Overview of dev environment setup (e.g. updates to _env.rb)
+## 1. Overview of dev environment setup (e.g. updates to _env.rb)
 
 **Updates to Gemfile:**
 - `gem leaflet-rails`
@@ -18,7 +18,7 @@ Starter App for ValetBike project
 - CSS
 - Bootstrap
 
-### Instructions for populating database (e.g. a rake task or seed setup)
+## 2. Instructions for populating database (e.g. a rake task or seed setup)
 1. `bundle install`
 2. `rake db:drop` (if a previous database has been created or in use)
 3. `rake db:create`
@@ -29,7 +29,7 @@ Starter App for ValetBike project
 * If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
 * If using `rails s` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
 
-### Changes since prototype
+## 3. Changes since prototype
 - The app is functioning!
 - Users are able to signup, login, and logout.
 - Content is up to date on each page.
@@ -38,7 +38,7 @@ Starter App for ValetBike project
 - Logged in users can access the payment page.
 - Map is rendering with markers for each station which is pulling from the database.
 
-### Description of MVP functionality
+## 4. Description of MVP functionality
 
 | Feature | Location | Description |
 | ---- | ------ | ---------------------- |
@@ -49,7 +49,7 @@ Starter App for ValetBike project
 | Google translate | Footer | Users select preferred language using a google drop down button, and the site translates into that language. |
 | Payment connection | Payment Page | Users redirect to their Paypal or Venmo login after selecting their preferred membership. |
 
-### Walkthrough for key features
+## 5. Walkthrough for key features
 
 Welcome to KALES' Valetbike! Open up the link in your browser and you'll land on the **welcome page**. If you're hoping to use Valetbike as a non-english reader or to practice your foreign language skills, select your preferred language at the bottom of the page. Learn about Valetbike and the KALES team members on the **about page**. Peep those picrew renderings of the group (courtesy of @hunbloom on Instagram)! Have any questions about the process of Valetbike? Check out the **FAQ page**.
 
@@ -59,10 +59,10 @@ Now that you're all signed up, there's even more to see. Navigate to the **map p
 
 Maybe you're accessing Valetbike on a public computer or don't want someone easily accessing your information. Not to worry! You have the option to logout. Thank you for exploring Valetbike! Feel free to access your account again by logging back in (on the **login page**)
 
-### Deployment
+## 6. Deployment
 
 
-### Citations
+## 7. Citations
 
 **Overall**
 - https://guides.rubyonrails.org/index.html
