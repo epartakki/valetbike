@@ -80,10 +80,13 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 - https://www.w3schools.com/jquery/event_hover.asp 
 - https://flexboxfroggy.com/
 - https://picrew.me/image_maker/626197 
+- https://kids.niehs.nih.gov/games/riddles/jokes/fun-facts-and-trivia/index.htm
 
 **Controllers**
 - https://jaryl.medium.com/disciplined-rails-models-controllers-the-rails-way-bbc940822136
 - https://www.tutorialspoint.com/ruby-on-rails/rails-controllers.htm 
+- https://ruby-doc.org/core-2.7.0/Array.html
+- https://stackoverflow.com/questions/3482149/how-do-i-pick-randomly-from-an-array
 
 **Map**
 - https://womanonrails.com/leaflet 
