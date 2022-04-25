@@ -37,6 +37,3 @@
 
 # Ignore ENV variable file
 .env
-
-# Ignore VSCode Workplace Setting Files
-.vscode
