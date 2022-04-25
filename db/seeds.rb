@@ -24,4 +24,3 @@ csv.each do |row|
   t.lng = row['longitude']
   t.save
 end
-
