@@ -1,13 +1,13 @@
 :root {
-  --title-font:             'Rubik', 'Rubik Microbe';
-  --body-font:              'Rubik', 'Rubik Microbe';
+  --title-font:             'Roboto';
+  --body-font:              'Roboto';
 
-  --black-color:            #101925;
-  --light-black-color:      #2E2230;
-  --gray-color:             #d7dc74;
-  --light-gray-color:       #D0CED1;
-  --dark-white-color:       #ed7331;
-  --medium-white-color:     #a9b7d5;
-  --white-color:            #526f71;
+  --black-color:            #1C0F13;
+  --pink-color:             #c0a9b0;
+  --light-pink-color:       #dcd0d4;
+  --lighter-pink-color:     #f7ebef;
+  --raspberry-color:        #7d223d;
+  --medium-pink-color:      #f7779d;
+  --white-color:            #fff;
 
 }
