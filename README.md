@@ -5,11 +5,11 @@ Starter App for ValetBike project
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
-*Updates to Gemfile:*
+**Updates to Gemfile:**
 - `gem leaflet-rails`
 - `gem bcrypt`
 
-*Tech Stack*
+**Tech Stack**
 - Ruby
 - Javascript
 - Rails
@@ -41,7 +41,7 @@ Starter App for ValetBike project
 ### Description of MVP functionality
 
 | Feature | Location | Description |
-| -- | -- | ---------------------- |
+| ---- | ---- | ---------------------- |
 | Sign-up | Signup Page | Users submit a form with username and password, creating a new user and saving them in the database. |
 | Login | Login Page | Users submit a form with username and password, the database is queried for a user with that username, if a user is found, the password is authenticate, and a new session is created. |
 | Logout | Navbar Button | Users click logout and a post request is sent to the server to destroy the current session. |
