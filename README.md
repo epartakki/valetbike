@@ -103,3 +103,8 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 **Payment**
 - https://www.paypal.com/buttons/smart
 
+**Deployment**
+- https://devcenter.heroku.com/articles/jawsdb#using-jawsdb-with-rails
+
+**Google Translate**
+- https://www.w3schools.com/howto/howto_google_translate.asp
