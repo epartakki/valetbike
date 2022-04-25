@@ -121,7 +121,7 @@ header {
 
 .btn-primary {
     /* background-color: #383347; */
-    background-image: url(images/banner_small.jpg);
+    background-image: url(/assets/banner_small.jpg);
     background-size: contain;
     border: 1px solid #383347 !important;
     margin-bottom: 5%;
