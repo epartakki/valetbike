@@ -13,6 +13,18 @@
     <%= f.password_field :password, class: "form-control", id: "form-signup-pw"%><br>
     <%= f.label :password, class: "form-label", for: "form-signup-pw" %><br>
   </div>
+
+  <% #name input %>
+  <div class="form-outline mb-4">
+    <%= f.text_field :name, class: "form-control", id: "form-signup-name"%><br>
+    <%= f.label :name, class: "form-label", for: "form-signup-name" %><br>
+  </div>
+
+  <% #email input %>
+  <div class="form-outline mb-4">
+    <%= f.text_field :email, class: "form-control", id: "form-signup-email"%><br>
+    <%= f.label :email, class: "form-label", for: "form-signup-email" %><br>
+  </div>
   
   <div class="text-center">
   <%= f.submit "Create User", class: "btn btn-primary btn-block mb-4" %>
