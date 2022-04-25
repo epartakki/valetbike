@@ -4,8 +4,8 @@ class CreateStations < ActiveRecord::Migration[6.1]
       t.integer :identifier
       t.string  :name
       t.string  :address
-      t.decimal :lat
-      t.decimal :lng
+      t.decimal :lat, :precision => 16, :scale => 13
+      t.decimal :lng, :precision => 16, :scale => 13
 
       t.timestamps
     end
