@@ -119,6 +119,15 @@ header {
   color: var(--raspberry-color);
 }
 
+.card:hover {
+  border: 1px solid #383347 !important;
+}
+
+.card-body {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
 .btn-primary {
     /* background-color: #383347; */
     background-image: url(/assets/banner_small.jpg);
@@ -139,9 +148,4 @@ header {
 
 .btn-primary:focus, .btn-primary:active {
     box-shadow: 0 0 0 .25rem rgba(56, 51, 71,.5);
-}
-
-.card-body {
-    margin-left: 7%;
-    margin-right: 7%;
 }

@@ -1,20 +1,54 @@
 <h1>User Account</h1>
-<p>Placeholder for profile "picture."</p>
-<dl>
-    <dt>Userame:</dt>
-    <dd> <%= current_user.username %> </dd>
-    <dt>Password (definitely a secure practice): </dt>
-    <dd> <%= current_user.password %> </dd>
+<br>
+<div class="flexbox horizontal justify-space-around">
+    <div id="flex-item-1">
+        <img src="/assets/pfp.png" alt="Profile Picture" class="pfp">
+    </div>
+    <div id="flex-item-2">
+        <dl>
+            <dt>Username:</dt>
+            <dd> <%= current_user.username %> </dd>
+            <dt>Name:</dt>
+            <dd>
+                Insert name here
+            </dd>
+            <dt>Email:</dt>
+            <dd id="secret">
+                *****************
+            </dd>
+            <dt>Did You Know?</dt>
+            <dd>
+                Moose are the last surviving species of North American megafauna
+            </dd>
+            <dt>Delete your account?</dt>
+            <dd>
+                Sorry, we're stuck using dark patterns. You're here forever.
+            </dd>
+            <dt>Larger paragraph to test spacing</dt>
+            <dd>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Odio euismod lacinia at quis risus. Sed libero enim sed
+                faucibus. Urna nunc id cursus metus aliquam eleifend mi. Sit amet nisl purus in mollis nunc.
+                Id diam vel quam elementum pulvinar etiam. Vulputate enim nulla aliquet porttitor lacus.
+                Augue interdum velit euismod in pellentesque massa. Sollicitudin ac orci phasellus egestas
+                tellus. Quis commodo odio aenean sed adipiscing. Diam quis enim lobortis scelerisque. Morbi
+                blandit cursus risus at ultrices mi. Facilisis leo vel fringilla est ullamcorper. Fames ac
+                turpis egestas sed. Tortor consequat id porta nibh venenatis cras. In vitae turpis massa
+                sed.
+            </dd>
+        </dl>
+    </div>
+</div>
 
-    <%
-    # <dt>Username:</dt>
-    # <dd>[insert username here]</dd>
-    # <dt>Email:</dt>
-    # <dd>[insert email here]</dd>
-    # <dt>Payment plan:</dt>
-    # <dd>[insert payment plan here]</dd>
-    # <dt>Linked PayPal account:</dt>
-    # <dd>[insert linked paypal account here]</dd>
-    %>
-    
-</dl>
+<script>
+$(document).ready(function () {
+    $("#secret").hover(function () {
+        var $this = $(this);
+        $this.data('*****************', $this.text());
+        $this.text("johndoe@hotmail.com")
+    }, function () {
+        var $this = $(this);
+        $this.text($this.data('*****************'));
+    });
+});
+</script>
