@@ -118,3 +118,30 @@ header {
 .find-a-bike a:hover {
   color: var(--raspberry-color);
 }
+
+.btn-primary {
+    background-color: #383347;
+    border: none;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    transition: .6s;
+    transition-timing-function: ease-out;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    color: #383347 !important;
+    background-color: white !important;
+    border: 1px solid #383347 !important;
+    border: none;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.btn-primary:focus, .btn-primary:active {
+    box-shadow: 0 0 0 .25rem rgba(56, 51, 71,.5);
+}
+
+.card-body {
+    margin-left: 7%;
+    margin-right: 7%;
+}
