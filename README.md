@@ -5,56 +5,69 @@ Starter App for ValetBike project
 
 ### Overview of dev environment setup (e.g. updates to _env.rb)
 
-*Added new gems:*
-- `gem leaflet-rails` (not used)
-- `gem bcrypt` (not used)
+*Updates to Gemfile:*
+- `gem leaflet-rails`
+- `gem bcrypt`
 
-*Frameworks*
+*Tech Stack*
+- Ruby
+- Javascript
 - Rails
-- Bootstrap (downloaded but not integrated, hope to use in MVP)
-
-*Package Manager*
-- Yarn (downloaded but not integrated, hope to use in tandem with Bootstrap in MVP)
-
-## General Configuration Steps
+- MySQL
+- HTML
+- CSS
+- Bootstrap
 
 ### Instructions for populating database (e.g. a rake task or seed setup)
 1. `bundle install`
-2. `rake db:migrate`
+2. `rake db:drop` (if a previous database has been created or in use)
+3. `rake db:create`
+4. `rake db:migrate`
+5. `rake db:seed`
 3. `rackup` or `rails s`
 
 * If using `rackup` open http://localhost:9292 (or http://127.0.0.1:9292) in a browser
 * If using `rails s` open http://localhost:3000 (or http://127.0.0.1:3000) in a browser
 
-* You should see ValetBike welcome page, be able to click on log-in, and see a place where you can populate a username and password which we do not yet store
+### Changes since prototype
+- The app is functioning!
+- Users are able to signup, login, and logout.
+- Content is up to date on each page.
+- Theme is selected.
+- Colors across the site are consistent and reflective of overall theme.
+- Logged in users can access the payment page.
+- Map is rendering with markers for each station which is pulling from the database.
 
-### Description of prototype functionality
-- Bare bones layout (Front-End and Back-End) 
-    - Installed Bootstrap (not implemented yet)
-    - Created image folder
-    - Set-up controllers
-    - Set-up helpers
-    - Added and edited models
-    - Added layouts
-    - Added to routes.rb
-    - Set up robots.txt
-- Database
-    - Added new migrations
-    - Set up schema.rb
-    - Set up seeds.rb
-    - Set up an import_data rake
-- Utilize Google Maps and PayPal
-    - Opted to using Paypal buttons for our MVP which do not need additional credentials but instead a transfer of code (minimal to non-existent functionality)
-    - Google Maps credentials established on Google Cloud, but need to integrate code out of the maps file, and into the html. DEBATING using leaflet.
+### Description of MVP functionality
 
-### Recommended walkthrough steps to observe key features
-- Currently, we recommend going through the following files to observe what we have attempted to set-up as we do not have functionality without errors. Our task is to solve this isssue this week, so we can continue implementing our features.
+| Feature | Location | Description |
+| -- | -- | ---------------------- |
+| Sign-up | Signup Page | Users submit a form with username and password, creating a new user and saving them in the database. |
+| Login | Login Page | Users submit a form with username and password, the database is queried for a user with that username, if a user is found, the password is authenticate, and a new session is created. |
+| Logout | Navbar Button | Users click logout and a post request is sent to the server to destroy the current session. |
+| Map | Map Page | An interactive leaflet map is rendered with markers for each station. Station data is displayed when a marker is selected which is queried from the database. |
+| Google translate | Footer | Users select preferred language using a google drop down button and the site is translated into that language. |
+| Payment connection | Payment Page | Users are redirected to their Paypal or Venmo login after selecting their preferred membership. |
 
-    > - `app/controllers`
-    > - `app/map`
-    > - `app/models`
-    > - `app/views`
-    > - `db/`
+- Sign-up, Users submit a form with username and password, creating a new user and saving them in the database.
+- Login, Users submit a form with username and password, the database is queried for a user with that username, if a user is found, the password is authenticate, and a new session is created.
+- Logout, Users click a button, sending a post request to destroy the current session
+- Interactive map of Nipmuc Notch (station iformation pulled from the database), the map page renders an interactive leaflet map with markers for each station. Station data is queried from the database
+- Google translate select language option
+- Payment connection to Paypal and Venmo
+
+### Walkthrough for key features
+
+Welcome to KALES' Valetbike! Open up the link in your browser and you'll land on the **welcome page**. If you're hoping to use Valetbike as a non-english reader or someone just practicing their language learning, select your preferred language at the bottom of the page. Learn about Valetbike and the KALES team members on the **about page**. Peep those picrew renderings of the group! 
+
+There are more features to explore. Have any questions about the process of Valetbike? Check out the **FAQ page**. Create an account on the **signup page** to experience Valetbike fully. Once you're signed in, check your user information on your **account page**. Your username should be on display. Click your password to view!
+
+Now that you're all signed up, there's even more to see. Navigate to the **map page** and interact with the available bike stations. Want to rent a bike? Check out the **pricing page** to view our rates. Select a pricing plan and you'll be directed to the **payment page**. Purchase that membership: select your prefered option and checkout with Paypal. Thank you so much for purchasing a Valetbike membership! The bikes definitely exist! We have a van ;).
+
+Maybe you're accessing Valetbike on a public computer or don't want someone easily accessing your information. Not to worry! You have the option to logout. Thank you for exploring Valetbike! Feel free to access your account again by logging back in (on the **login page**)
+
+### Deployment
+
 
 ### Citations
 - https://github.com/AnyKeyOrg/anykey
