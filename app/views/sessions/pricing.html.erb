@@ -1,26 +1,31 @@
-<br/>
-<img src="/assets/logo.png" alt = "Background">
-<br/>
-<br/>
-
-
 <h1>Pricing</h1>
 <h3>give us money</h3>
 #do i need to make this h2 lol
 <h3>Select your plan.<h3>
 
-#none of these are funcitonal
-#<p>Single ride, $2/trip, one ride for up to 30 minutes</p>
-<%= button_to "Get Single Pass", '/payment', method: :get%>
-<br/>
-#<p>Day pass, $6/day, unlimited 30 minute rides for 24 hours</p>
-<%= button_to "Get Day Pass", '/payment', method: :get%>
-<br/>
-#<p> Month pass, $20/month, unlimited 45 minute rides for a month </p>
-<%= button_to "Get Month Pass", '/payment', method: :get%>
-<br/>
-#<p>Annual pass, $80/year, unlimited 45 minute rides for a year</p>
-<%= button_to "Get Annual Pass", '/payment', method: :get%>
-<br/>
-
-#other options or nah?
+<div class="card-group">
+    <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <%= button_to "Get Single Pass", '/payment', class="btn btn-primary", method: :get%>
+            <p class="card-text">Single ride, $2/trip, one ride for up to 30 minutes</p>
+        </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <%= button_to "Get Day Pass", '/payment', class="btn btn-primary", method: :get%>
+            <p class="card-text">Day pass, $6/day, unlimited 30 minute rides for 24 hours</p>
+        </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <%= button_to "Get Month Pass", '/payment', class="btn btn-primary", method: :get%>
+            <p class="card-text">Month pass, $20/month, unlimited 45 minute rides for a month</p>
+        </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <%= button_to "Get Annual Pass", '/payment', class="btn btn-primary", method: :get%>
+            <p class="card-text">Annual pass, $80/year, unlimited 45 minute rides for a year</p>
+        </div>
+    </div>
+</div>
