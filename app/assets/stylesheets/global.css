@@ -30,11 +30,11 @@ body {
   min-height: 100%;
   font-family: var(--body-font);
   font-weight: 400;
-  color: var(--black-color);
-  background: var(--white-color);
+  color: black;
+  background: white;
 }
 
-/* .navbar {
+.navbar {
   padding: 0.25rem 0.5rem;
   background-color: #1C0F13 !important;
 }
@@ -85,4 +85,4 @@ header {
 .accordion-button:focus {
   border-color: #f7779d;
   box-shadow: 0 0 0 .25rem rgba(100, 35, 53, 0.25);
-} */
+}
