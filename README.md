@@ -106,6 +106,8 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 
 **Deployment**
 - https://devcenter.heroku.com/articles/jawsdb#using-jawsdb-with-rails
+- https://stackoverflow.com/questions/57277351/rails-6-zeitwerknameerror-doesnt-load-class-from-module 
+- https://devcenter.heroku.com/articles/procfile
 
 **Google Translate**
 - https://www.w3schools.com/howto/howto_google_translate.asp
