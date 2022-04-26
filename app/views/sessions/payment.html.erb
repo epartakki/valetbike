@@ -4,9 +4,8 @@
 <div id="smart-button-container">
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
-          <p>ValetBike Ride</p>
           <select id="item-options"><option value="Single Ride (One ride for up to 30 minutes)" price="2">Single Ride (One ride for up to 30 minutes) - 2 USD</option><option value="Day Pass (Unlimited 30 minute rides for 24 hours)" price="6">Day Pass (Unlimited 30 minute rides for 24 hours) - 6 USD</option><option value="Month Pass (Unlimited 45 minute rides for a month)" price="20">Month Pass (Unlimited 45 minute rides for a month) - 20 USD</option><option value="Annual Pass (Unlimited 45 minute rides for a year)" price="80">Annual Pass (Unlimited 45 minute rides for a year) - 80 USD</option></select>
-          <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
         </div>
       <div id="paypal-button-container"></div>
       </div>
@@ -16,7 +15,7 @@
       function initPayPalButton() {
         var shipping = 0;
         var itemOptions = document.querySelector("#smart-button-container #item-options");
-    var quantity = parseInt(1);
+    var quantity = parseInt();
     var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
     if (!isNaN(quantity)) {
       quantitySelect.style.visibility = "visible";
