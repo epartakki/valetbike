@@ -82,7 +82,7 @@ body {
 header {
   margin: 0px;
   padding: 0px;
-  background-image: url(/assets/banner.jpg);
+  background-image: url(/banner.jpg);
   background-repeat: repeat-x;
   background-size: contain;
   height: 13vw;
@@ -130,7 +130,7 @@ header {
 
 .btn-primary {
     /* background-color: #383347; */
-    background-image: url(/assets/banner_small.jpg);
+    background-image: url(/banner_small.jpg);
     background-size: contain;
     border: 1px solid #383347 !important;
     margin-bottom: 5%;
