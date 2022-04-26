@@ -165,3 +165,33 @@ header {
 #secret {
     display: inline-block;
 }
+
+.wrapper {
+    padding-top: 3%;
+}
+
+footer {
+    padding: 0.5% 1%;
+    background-color: #1C0F13;
+    color: white;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    transition: .5s;
+}
+
+footer > div {
+    flex: 1 1 33%;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #f7779d;
+}
