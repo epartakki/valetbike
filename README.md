@@ -76,11 +76,12 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 - https://ninjadevel.com/seeding-database-ruby-on-rails/ 
 
 **Frontend**
+- https://picrew.me/image_maker/626197 (About Page images)
+- https://unsplash.com/photos/d4wKPboIC_Y (Account image)
+- https://kids.niehs.nih.gov/games/riddles/jokes/fun-facts-and-trivia/index.htm
 - https://getbootstrap.com/docs/5.1/getting-started/introduction/
 - https://www.w3schools.com/jquery/event_hover.asp 
 - https://flexboxfroggy.com/
-- https://picrew.me/image_maker/626197 
-- https://kids.niehs.nih.gov/games/riddles/jokes/fun-facts-and-trivia/index.htm
 - https://stackoverflow.com/questions/10701124/jquery-replace-text-of-element-on-hover
 
 **Controllers**

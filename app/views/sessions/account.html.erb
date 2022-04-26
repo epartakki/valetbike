@@ -1,20 +1,38 @@
 <h1>User Account</h1>
-<p>Placeholder for profile "picture."</p>
-<dl>
-    <dt>Userame:</dt>
-    <dd> <%= current_user.username %> </dd>
-    <dt>Password (definitely a secure practice): </dt>
-    <dd> <%= current_user.password %> </dd>
+<br>
+<div class="flexbox horizontal justify-space-around">
+    <div id="flex-item-1">
+        <img src="/assets/pfp.png" alt="Profile Picture" class="pfp">
+    </div>
+    <div id="flex-item-2">
+        <dl>
+            <dt>Username:</dt>
+            <dd> <%= current_user.username %> </dd>
+            <dt>Name:</dt>
+            <dd>
+                <%= current_user.name %>
+            </dd>
+            <dt>Email:</dt>
+            <dd id="secret">
+                *****************
+            </dd>
+            <dt>Did You Know?</dt>
+            <dd>
+                <%= current_user.fun_fact %>
+            </dd>
+        </dl>
+    </div>
+</div>
 
-    <%
-    # <dt>Username:</dt>
-    # <dd>[insert username here]</dd>
-    # <dt>Email:</dt>
-    # <dd>[insert email here]</dd>
-    # <dt>Payment plan:</dt>
-    # <dd>[insert payment plan here]</dd>
-    # <dt>Linked PayPal account:</dt>
-    # <dd>[insert linked paypal account here]</dd>
-    %>
-    
-</dl>
+<script>
+$(document).ready(function () {
+    $("#secret").hover(function () {
+        var $this = $(this);
+        $this.data('*****************', $this.text());
+        $this.text("<%= current_user.email %>")
+    }, function () {
+        var $this = $(this);
+        $this.text($this.data('*****************'));
+    });
+});
+</script>
