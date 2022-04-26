@@ -62,6 +62,8 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 ## Deployment
 [KALES Valetbike deployed on Heroku](https://valetbike-kales.herokuapp.com/)
 
+![](frontpage-screenshot.png)
+
 ## Citations
 
 **Overall**
