@@ -60,7 +60,7 @@ Now that you're all signed up, there's even more to see. Navigate to the **map p
 Maybe you're accessing Valetbike on a public computer or don't want someone easily accessing your information. Not to worry! You have the option to logout. Thank you for exploring Valetbike! Feel free to access your account again by logging back in (on the **login page**)
 
 ## Deployment
-
+[KALES Valetbike deployed on Heroku](https://valetbike-kales.herokuapp.com/)
 
 ## Citations
 
