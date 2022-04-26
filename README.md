@@ -1,7 +1,9 @@
 # KALES meets ValetBike
 
 Smith College CSC223: Software Engineering
-Starter App for ValetBike project
+Starter App for ValetBike project.
+
+*NOTE: To set up your initial environment, follow the guide by [deadroxy](https://github.com/deadroxy/valetbike/blob/master/README.md)/)*
 
 ## Overview of dev environment setup (e.g. updates to _env.rb)
 
