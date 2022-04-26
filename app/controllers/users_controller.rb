@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(params.require(:user).permit(:username, :password))
+    @user = User.create(params.require(:user).permit(:username, :password, :name, :email))
 
     fun_facts = [
       "A shrimp's heart is in its head.",
