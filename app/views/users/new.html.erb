@@ -6,6 +6,18 @@
 
       <div class="card-body">
 
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <%= f.text_field :name, class: "form-control", id: "form-signup-text"%>
+          <%= f.label :name, class: "form-label", for: "form-signup-text" %>
+        </div>
+        
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <%= f.email_field :email, class: "form-control", id: "form-signup-email"%>
+          <%= f.label :email, class: "form-label", for: "form-signup-email" %>
+        </div>
+
         <!-- Username input -->
         <div class="form-outline mb-4">
           <%= f.text_field :username, class: "form-control", id: "form-signup-username"%>
