@@ -60,7 +60,9 @@ Now that you're all signed up, there's even more to see. Navigate to the **map p
 Maybe you're accessing Valetbike on a public computer or don't want someone easily accessing your information. Not to worry! You have the option to logout. Thank you for exploring Valetbike! Feel free to access your account again by logging back in (on the **login page**)
 
 ## Deployment
+[KALES Valetbike deployed on Heroku](https://valetbike-kales.herokuapp.com/)
 
+![](public/frontpage-screenshot.png)
 
 ## Citations
 
@@ -104,3 +106,10 @@ Maybe you're accessing Valetbike on a public computer or don't want someone easi
 **Payment**
 - https://www.paypal.com/buttons/smart
 
+**Deployment**
+- https://devcenter.heroku.com/articles/jawsdb#using-jawsdb-with-rails
+- https://stackoverflow.com/questions/57277351/rails-6-zeitwerknameerror-doesnt-load-class-from-module 
+- https://devcenter.heroku.com/articles/procfile
+
+**Google Translate**
+- https://www.w3schools.com/howto/howto_google_translate.asp
