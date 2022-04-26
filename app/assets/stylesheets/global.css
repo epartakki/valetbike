@@ -120,20 +120,29 @@ header {
 
 }
 
+.card:hover {
+  border: 1px solid #383347 !important;
+}
+
+.card-body {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
 .btn-primary {
-    background-color: #383347;
-    border: none;
+    /* background-color: #383347; */
+    background-image: url(/assets/banner_small.jpg);
+    background-size: contain;
+    border: 1px solid #383347 !important;
     margin-bottom: 5%;
     margin-top: 5%;
-    transition: .6s;
+    transition: .55s;
     transition-timing-function: ease-out;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
     color: #383347 !important;
     background-color: white !important;
-    border: 1px solid #383347 !important;
-    border: none;
     margin-bottom: 5%;
     margin-top: 5%;
 }
@@ -142,7 +151,48 @@ header {
     box-shadow: 0 0 0 .25rem rgba(56, 51, 71,.5);
 }
 
-.card-body {
-    margin-left: 7%;
-    margin-right: 7%;
+#flex-item-1 {
+    flex: 0 0 30%;
+}
+
+#flex-item-2 {
+    flex: 0 0 70%;
+}
+
+.pfp {
+    max-width: 70%;
+}
+
+#secret {
+    display: inline-block;
+}
+
+.wrapper {
+    padding-top: 3%;
+}
+
+footer {
+    padding: 0.5% 1%;
+    background-color: #1C0F13;
+    color: white;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    transition: .5s;
+}
+
+footer > div {
+    flex: 1 1 33%;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #f7779d;
 }
